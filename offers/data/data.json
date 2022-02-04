@@ -1,0 +1,583 @@
+{
+  "intents": [
+    {
+      "tag": "hours",
+      "patterns": [
+        "W jakich godzinach jest otwarte",
+        "W jakich godzinach pracujecie",
+        "Kiedy jest otwarte",
+        "w jakich godzinach salon jest otwarty",
+        "Jakie są godziny pracy",
+        "godziny otwarcia",
+        "godziny pracy",
+        "kiedy macie otwarte"
+      ],
+      "responses": [
+        "Od godziny ósmej do dwudziestej codziennie",
+        "Każdego dnia w godzinach od ósmej do dwudziestej"
+      ]
+    },
+    {
+      "tag": "no_limit_sms",
+      "patterns": [
+        "Czy są nielimitowane smsy",
+        "Czy jest jakaś oferta z nielimitowanymi smsami",
+        "interesują mnie nielimitowane smsy",
+        "sms-y",
+        "nielimitowane smsy",
+        "sms bez limitu",
+        "oferta nielimitowanych smsów",
+        "nielimitowane sms"
+      ],
+      "responses": [
+        "Tak mamy takie oferty proszę spojrzeć na ekran",
+        "Jasne są takie oferty oraz te z nielimitowanymi MMS ami proszę spojrzeć na ekran"
+      ]
+    },
+    {
+      "tag": "abonament_internet",
+      "patterns": [
+        "Jaki internet ma oferta z abonamentem",
+        "Jaki transfer internetu przy ofercie z abonamentem",
+        "jaki internet przy ofercie z abonamentem",
+        "internet na abonament",
+        "abonament z internetem",
+        "ilośc internetu z abonamentem",
+        "ile internetu w abonamencie"
+      ],
+      "responses": [
+        "Tak jest oferta od dwóch do piętnastu gigabajtów",
+        "Jasne oferta z abonamentem posiada internet od dwóch do piętnastu gigabajtów a jej koszt to od pięćdziesiąt do dziewięćdziesiąt złotych"
+      ]
+    },
+    {
+      "tag": "netflix",
+      "patterns": [
+        "Czy w pakiecie dostępny jest Netflix",
+        "Czy przy abonamencie dostępny będzie Netflix",
+        "Interesuje mnie czy w pakietach dostępny jest Netflix",
+        "Netfliks",
+        "Pokaż ofertę z Netflixem",
+        "Netflix",
+        "pakiet z netflixem",
+        "czy macie coś z netflixem"
+      ],
+      "responses": [
+        "Tak w naszych ofertach mamy Netflixa za darmo przez 6 miesięcy",
+        "Tak w naszej ofercie dostępny jest Netflix nie musisz dziękować"
+      ]
+    },
+    {
+      "tag": "time_of_agreement",
+      "patterns": [
+        "Na jaki czas podpisywana jest umowa",
+        "Ile miesięcy obowiązuje umowa",
+        "Jaki jest czas trwania umowy",
+        "Ile czasu obowiązuje umowa",
+        "czas umowy",
+        "okres umowy",
+        "czas trwania umowy",
+        "długość umowy"
+      ],
+      "responses": [
+        "Umowa trwa od dwudziestu czterech do trzydziestu sześciu miesięcy",
+        "Umowa u nas trwa od dwudziestu czterech do trzydziestu sześciu miesięcy"
+      ]
+    },
+    {
+      "tag": "type_of_telephone",
+      "patterns": [
+        "Jaki telefon mogę wybrać",
+        "Jaki telefon przy umowie",
+        "Typ telefonu przy umowie",
+        "Telefony jakie posiadacie",
+        "jakie telefony posiadacie",
+        "chcę zobaczyć telefony w salonie",
+        "telefony na wystawie",
+        "wystawowe telefony"
+      ],
+      "responses": [
+        "W naszej ofercie może pan mieć telefon LG Samsung Apple Xiaomi Motorola",
+        "W naszej ofercie jest wiele marek telefonów"
+      ]
+    },
+    {
+      "tag": "type_of_offers",
+      "patterns": [
+        "Jakie są dostępne oferty",
+        "Jakie są najlepsze oferty",
+        "Jaki oferty proponujecie",
+        "Szukam najlepszej oferty",
+        "dostępne oferty",
+        "jakie są typy ofert",
+        "dostępne oferty"
+      ],
+      "responses": [
+        "Posiadamy oferty mix abonament plus karta",
+        "Wszystkie informacje prezentuję na ekranie"
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Czy jest ktoś kto może mi pomóc",
+        "potrzebuję pomocy z",
+        "potrzebuję pomocy",
+        "chciałem o coś zapytać",
+        "pomoc",
+        "mam pytanie"
+      ],
+      "responses": [
+        "Tak proszę powiedzieć z czym potrzeba pomocy",
+        "Jasne proszę powiedzieć jaka pomoc jest oczekiwana"
+      ]
+    },
+    {
+      "tag": "mix",
+      "patterns": [
+        "Czy dostępna jest oferta mix",
+        "Czy występuje u państwa oferta mix",
+        "szukam oferty mix na kartę",
+        "mix na kartę",
+        "miks na kartę",
+        "oferta miks",
+        "interesuje mnie ofera mix",
+        "jestem zainteresowany ofertą mix na kartę"
+      ],
+      "responses": [
+        "Tak mamy w naszym asortymencie ofertę mix",
+        "Tak pewnie"
+      ]
+    },
+    {
+      "tag": "mobile_internet",
+      "patterns": [
+        "Jaki internet mobilny jest dostępny",
+        "internet mobilny",
+        "mobilny transfer",
+        "pakiet internetu",
+        "ile internetu mobilnego",
+        "ile gb internetu",
+        "mobilny pakiet internetu"
+      ],
+      "responses": [
+        "Internet mobilny występuje w pakietach od dwudziestu do pięćdziesięciu gigabajtów"
+      ]
+    },
+    {
+      "tag": "landline_internet_options",
+      "patterns": [
+        "Jakie są dostępne opcje usługi internet",
+        "Jaki jest możliwy internet",
+        "jaki internet mogę założyć",
+        "chcę założyć internet",
+        "kiedy założą mi internet",
+        "chcę założyć internet stacjonarny",
+        "usługa internetu"
+      ],
+      "responses": [
+        "Internet stacjonarny możliwy w opcjach jeden dwa lub sześć megabitów na sekunde",
+        "Wyświetlam dane oferty internetu stacjonarnego na ekranie"
+      ]
+    },
+    {
+      "tag": "landline_internet_costs",
+      "patterns": [
+        "Jakie są koszty internetu stacjonarnego",
+        "Ile kosztuje internet stacjonarny",
+        "Jaka jest opłata abonamentowa internetu stacjonarnego",
+        "cena internetu",
+        "internet stacjonarny",
+        "abonament za stacjonarny internet",
+        "chcę stacjonarny internet"
+      ],
+      "responses": [
+        "Wyświetlam ofertę internetu stacjonarnego oraz opłaty na ekranie"
+      ]
+    },
+    {
+      "tag": "landline_internet_activation",
+      "patterns": [
+        "Jaka jest opłata za aktywację internetu stacjonarnego",
+        "Jakie są koszty aktywacji internetu stacjonarnego",
+        "aktywacja internetu",
+        "koszt aktywacji internetu stacjonarnego",
+        "ile zapłacę za aktywację internetu stacjonarnego",
+        "czy aktywacja internetu stacjonarnego jest darmowa"
+      ],
+      "responses": [
+        "Opłata za aktywację to czterdzieści dziewięć złotych i 40 groszy plus vat",
+        "Oplata wynosi czterdzieści dziewięć złotych i 40 groszy plus vat"
+      ]
+    },
+    {
+      "tag": "landline_internet_modem",
+      "patterns": [
+        "Jaki koszt modemu",
+        "Jaki jest koszt modemu",
+        "Ile kosztuje modem",
+        "modem cena",
+        "ile zapłacę za modem",
+        "opłata za modem",
+        "czy modem jest darmowy"
+      ],
+      "responses": [
+        "Cena wynosi złotówkę bądź 99 złotych w zależności od wybranej opcji",
+        "Prezentuję ofertę modemów na ekranie"
+      ]
+    },
+    {
+      "tag": "landline_internet_hidden_costs",
+      "patterns": [
+        "Są jakieś ukryte koszty przy internecie stacjonarnym",
+        "Jakie są dodatkowe opłaty przy internecie stacjonarnym",
+        "Czy są jakieś dodatkowe opłaty przy internecie stacjonarnym",
+        "ukryte koszta",
+        "dodatkowe opłaty dla internetu stacjonarnego"
+      ],
+      "responses": [
+        "Tak istnieją opłaty które naliczamy za nieterminowość",
+        "Występują opłaty za nieterminowe płatności ale to tyle"
+      ]
+    },
+    {
+      "tag": "landline_internet_extends",
+      "patterns": [
+        "Czy usługa Internet Stacjonarny daje możliwość jednoczesnego korzystania z Internetu i rozmawiania przez telefon",
+        "Czy usługa Internet Stacjonarny pozwala na korzystania z Internetu i rozmawiania przez telefon",
+        "Korzystanie jednocześnie z internetu i telefonu",
+        "rozmowa i internet w tym samym czasie",
+        "używanie internetu i telefonu w tym samym momencie"
+      ],
+      "responses": [
+        "Tak w technologii ADSL sygnał telefoniczny rozdzielony jest od sygnału internetowego",
+        "Zgadza się można korzystać z obu rzeczy"
+      ]
+    },
+    {
+      "tag": "landline_internet_support",
+      "patterns": [
+        "Czy ktoś przyjdzie zainstalować modem w moim domu",
+        "Kto zainstaluje modem w moim domu",
+        "Kto u mnie zamontuje modem",
+        "Instalacja modemu",
+        "jak wygląda instalacja modemu",
+        "jak instalujecie modem"
+      ],
+      "responses": [
+        "Nie ma takiej potrzeby Instalacja modemu jest bardzo prosta",
+        "Można zrobić to samemu jest to bardzo proste"
+      ]
+    },
+    {
+      "tag": "landline_internet_without_telephone",
+      "patterns": [
+        "Czy mogę skorzystać z oferty internetu i zrezygnować całkowicie z telefonu",
+        "Czy potrzebuję telefonu do oferty internetu stacjonarnego",
+        "rezygnacja telefon",
+        "chcę internet nie chcę telefonu",
+        "internet ale bez telefonu"
+      ],
+      "responses": [
+        "Internet Stacjonarny musi utrzymywać aktywną usługę telefoniczną"
+      ]
+    },
+    {
+      "tag": "landline_internet_why_not",
+      "patterns": [
+        "Dlaczego w miejscu mojego zamieszkania nie mogę skorzystać z oferty Internet Stacjonarny",
+        "Czemu nie mogę skorzystać z oferty Internet stacjonarny",
+        "Internet stacjonarny jest niedostępny",
+        "brak internetu stacjonarnego w mojej lokalizacji",
+        "brak internetu stacjonarnego dla mojego adresu"
+      ],
+      "responses": [
+        "W niektórych przypadkach linie nie spełniają warunków technicznych do świadczenia usług"
+      ]
+    },
+    {
+      "tag": "internet_transfer",
+      "patterns": [
+        "Czy transfer danych podlega limitowi",
+        "Czy internet jest limitowany",
+        "limit internetu",
+        "limit transferu",
+        "limit dla transferu"
+      ],
+      "responses": [
+        "Nie Użytkownik może pobierać i wysyłać nieograniczoną ilość danych a za usługę płaci stały miesięczny abonament"
+      ]
+    },
+    {
+      "tag": "5g",
+      "patterns": [
+        "Czy dostępne jest pięć g",
+        "Czy dostępne jest 5G",
+        "sieć 5g",
+        "dostępna sieć pięć g",
+        "pięć g",
+        "5g",
+        "czy macie 5g"
+      ],
+      "responses": [
+        "Tak posiadamy ofertę z 5G"
+      ]
+    },
+    {
+      "tag": "magenta_box",
+      "patterns": [
+        "Czy macie telewizję",
+        "Interesuje mnie telewizja",
+        "Chciałem wykupić telewizję",
+        "telewizja w pakiecie",
+        "telewizja",
+        "magenta box",
+        "tv"
+      ],
+      "responses": [
+        "Posiadamy telewizję w połączeniu z magenta box",
+        "Tak proszę spojrzeć na ekran z ofertą magenta box"
+      ]
+    },
+    {
+      "tag": "fiber",
+      "patterns": [
+        "Czy w mojej okolicy jest światłowód",
+        "dostępność światłowodu",
+        "Czy jest u mnie światłowód",
+        "światłowód",
+        "superszybki internet",
+        "czy jest możliwośc światłowodu",
+        "mapa dostępności światłowodów"
+      ],
+      "responses": [
+        "Wyświetlam mapę która informuje o dostępności światłowodu",
+        "Tak są u nas światłowody proszę spojrzeć na mapę"
+      ]
+    },
+    {
+      "tag": "facture",
+      "patterns": [
+        "Czy wystawiana jest faktura",
+        "Chciałbym dostać fakturę",
+        "wystawcie mi fakture",
+        "faktura",
+        "rachunek na fakturę"
+      ],
+      "responses": [
+        "Możemy wystawiać fakturę na każdy zakup",
+        "Tak jasne wystawimy fakturę jeżeli jest potrzebna"
+      ]
+    },
+    {
+      "tag": "companies",
+      "patterns": [
+        "Szukam ofert dla firm",
+        "oferty dla firm",
+        "umowa dla firmy",
+        "firma",
+        "oferta dla mojej firmy",
+        "oferta firmowa"
+      ],
+      "responses": [
+        "Posiadamy specjalne oferty dla firm, spójrz na ekran"
+      ]
+    },
+    {
+      "tag": "sale",
+      "patterns": [
+        "Szukam promocji",
+        "Czy macie jakieś promocje",
+        "Jakie macie promocje",
+        "promocja na produkty",
+        "promocja",
+        "obecne promocje",
+        "interesują mnie promocje"
+      ],
+      "responses": [
+        "Obecnie w promocji posiadamy internet stacjonarny oraz telewizję",
+        "W promocji posiadamy telefony już od jednej złotówki"
+      ]
+    },
+    {
+      "tag": "cash",
+      "patterns": [
+        "Chciałem zapłacić kartą",
+        "Chciałem zapłacić gotówką",
+        "Czy można płacić gotówką",
+        "Czy mogę płacić kartą",
+        "płatność gotówką",
+        "czy mogę zapłacić kartą",
+        "zapłacę kartą",
+        "gotówka",
+        "karta kredytowa",
+        "karta płatnicza"
+      ],
+      "responses": [
+        "Można płacić zarówno kartą jak i gotówką",
+        "Jasne można płacić i kartą i gotówką"
+      ]
+    },
+    {
+      "tag": "universal_costs",
+      "patterns": [
+        "ile to będzie kosztować",
+        "jaki jest koszt",
+        "ile kosztuje ten pakiet",
+        "jaka jest cena",
+        "ile za to zapłacę"
+      ],
+      "responses": [
+        "Prezentuję cenę na ekranie",
+        "Cenę można zobaczyć na ekranie",
+        "Proszę spojrzeć na ekran"
+      ]
+    },
+    {
+      "tag": "universal_time",
+      "patterns": [
+        "kiedy będzie to dostępne",
+        "w ile czasu będzie to dostępne",
+        "jak będzie to dostępne",
+        "dostępnośc oferty",
+        "do kiedy będzie dostępne"
+      ],
+      "responses": [
+        "Ofertę oraz jej dostępność prezentuję na ekranie",
+        "Na ekranie można zobaczyć dostępność"
+      ]
+    },
+    {
+      "tag": "christmas_offer",
+      "patterns": [
+        "Czy macie jakieś oferty świąteczne",
+        "Proszę powiedzieć więcej o ofertach świątecznych",
+        "jakie są prezenty świąteczne",
+        "jaki prezent na święta",
+        "prezent z okazji świąt"
+      ],
+      "responses": [
+        "Prezentuję na ekranie naszą specjalną ofertę świąteczną",
+        "Tak się składa, że mamy dla ciebie prezent, spójrz na ekran"
+      ]
+    },
+    {
+      "tag": "family_offer",
+      "patterns": [
+        "Rodzinna oferta",
+        "Czy masz ofertę dla rodzin",
+        "Słyszałem o ofercie rodzinnej powiedz o niej coś więcej",
+        "oferta dla rodziny",
+        "pakiet dla rodziny",
+        "zniżka dla rodziny"
+
+      ],
+      "responses": [
+        "Witaj mamy ofertę specjalnie dla twojej rodziny, popatrz na ekran",
+        "Jasne, przygotowaliśmy coś specjalnie dla twojej rodziny"
+      ]
+    },
+    {
+      "tag": "nju_mobile",
+      "patterns": [
+        "Internet w nju mobile",
+        "oferta nju mobile",
+        "internet nju mobile",
+        "nju mobile"
+      ],
+      "responses": [
+        "Pokazuje właśnie na ekranie internet w nju mobile, zerknij proszę",
+        "Internet w NJU mobile jest super, a to ile zapewnia możesz zobaczyć na ekranie"
+      ]
+    },
+    {
+      "tag": "account_recharging",
+      "patterns": [
+        "chcę doładować konto",
+        "czy zapłacić za telefon",
+        "chciałbym doładować swoje konto",
+        "chcę uzupełnić środki na koncie",
+        "doładowanie konta",
+        "uzupełnienie środków na koncie"
+      ],
+      "responses": [
+        "możesz to zrobić poprzez zakupienie w sklepie doładowania a następnie wpisaniu gwiazdka sto gwiazdka twój kod z doładowania hasz",
+        "możesz doładować konto poprzez naszą stronę oraz poprzez kupon"
+      ]
+    },
+    {
+      "tag": "students_offer",
+      "patterns": [
+        "Oferta studencka",
+        "Oferta dla uczniów",
+        "macie coś dla studentów",
+        "zniżka studencka",
+        "czy macie zniżkę dla studentów",
+        "rabat studencki"
+      ],
+      "responses": [
+        "no jacha mamy coś specjalnie dla studentów i uczniow",
+        "zerknij na ekran studenciak"
+      ]
+    },
+    {
+      "tag": "missunderstand",
+      "patterns": [
+        "nic nie zrozumiałem",
+        "przepraszam nie rozumiem",
+        "nie zrozumiałem",
+        "kompletnie nic nie zrozumiałem",
+        "możesz powtórzyć bo nie rozumiem",
+        "nie rozumiem",
+        "nie wiem o co chodzi",
+        "nie zrozumiałeś mnie"
+      ],
+      "responses": [
+        "Przepraszam proszę powiedz jeszcze raz co cię interesuje",
+        "wybacz proszę powiedz o co ci chodziło innymi słowami, jeszcze się uczę"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "jak masz na imię",
+        "nazywam się",
+        "przedstawisz się",
+        "powiedz swoje imię",
+        "jak się nazywasz",
+        "kim jesteś",
+        "imię",
+        "kim jesteś"
+      ],
+      "responses": [
+        "Jestem robotem firmy Nexio miło mi",
+        "Mam na imię Kajtek"
+      ]
+    },
+    {
+      "tag": "station",
+      "patterns": [
+        "gdzie jest najbliższy przystanek autobusowy",
+        "skąd odjeżdżają autobusy",
+        "gdzie jest przystanek",
+        "przystanek"
+      ],
+      "responses": [
+        "Najbliższy przystanek jest na lewo po wyjściu z salonu",
+        "Wyjdź z salonu i skieruj się w lewą strone"
+      ]
+    },
+    {
+      "tag": "where_i_can_see",
+      "patterns": [
+        "gdzie mogę zobaczyć tę ofertę",
+        "nie widzę żadnej oferty",
+        "nie widzę oferty",
+        "gdzie jest oferta"
+      ],
+      "responses": [
+        "oferta musi widnieć na ekranie",
+        "oferta powinna być na ekranie"
+      ]
+    }
+  ]}
