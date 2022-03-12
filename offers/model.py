@@ -14,7 +14,6 @@ from text_preprocessor import TextPreprocessor
 nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
-nltk.download('punkt')
 
 lemmatizer = TextPreprocessor()
 current_dir = os.path.dirname(os.path.abspath(__file__))

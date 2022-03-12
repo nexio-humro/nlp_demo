@@ -20,7 +20,7 @@ def nlp_demo():
 def decide_and_return(text: str):
     category = intent.predict(text)
     if(category == 1 or category == 2 or category == 3):
-        return offers.chat(text)
+        return offers.question(text)
     else:
         return "smalltalk"
 
