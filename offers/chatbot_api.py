@@ -25,10 +25,10 @@ class Chatbot:
         self.__text_preprocessor = TextPreprocessor()
         # %%
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        with open(current_dir + '\data\data.json', encoding='utf8') as file:
+        with open(current_dir + '/data/data.json', encoding='utf8') as file:
             self.__data = json.load(file)
 
-        with open(current_dir + '\data\data.pickle', 'rb') as f:
+        with open(current_dir + '/data/data.pickle', 'rb') as f:
             self.__words, self.__labels, self.__training, self.__output = pickle.load(f)
 
         self.__model = keras.models.load_model(current_dir + '/models/model/chatbot.keras')
