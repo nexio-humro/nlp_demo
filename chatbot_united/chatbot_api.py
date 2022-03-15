@@ -2,11 +2,9 @@ import json
 import os
 import pickle
 import random
-
 import nltk
 import numpy as np
 from tensorflow import keras
-
 # from offers.text_preprocessor import TextPreprocessor
 from text_preprocessor import TextPreprocessor
 from brain.math import do_math
@@ -23,7 +21,6 @@ class Chatbot:
     
     def __init__(self, threshold=0.55):
         self.threshold = threshold
-
         words = []
         print("chatbot-united init")
         self.__text_preprocessor = TextPreprocessor()
@@ -46,20 +43,20 @@ class Chatbot:
 
     # %%
 
-    def bag_of_words(self, sentence, words):
-        bag = [0 for _ in range(len(words))]
+    def bag_of_words(self, sentence, all_words):
+        bag = [0 for _ in range(len(all_words))]
         sentence_words = nltk.word_tokenize(sentence)
         sentence_words = [self.__text_preprocessor.lemmatize(word.lower()) for word in sentence_words]
 
         for s in sentence_words:
-            for i, w in enumerate(words):
+            for i, w in enumerate(all_words):
                 if w == s:
                     bag[i] = 1
         return np.array(bag)
 
     # %%
     def question(self, cause_text: str):
-        bag =  self.bag_of_words(sentence=cause_text, words=self.__words)
+        bag =  self.bag_of_words(sentence=cause_text, all_words=self.__words)
         results = self.__model.predict(np.array([bag]))
         results_index = np.argmax(results)
         tag = self.__labels[results_index]
@@ -79,9 +76,9 @@ class Chatbot:
             user_input = input("You:")
             if user_input.lower() == "koniec":
                 break
-            results1 = self.bag_of_words(user_input, words=self.__words)
-            results1 = np.array([results1])
-            predictions = self.__model.predict(results1)
+            common_words = self.bag_of_words(user_input, all_words=self.__words)
+            common_words = np.array([common_words])
+            predictions = self.__model.predict(common_words)
             results_index = np.argmax(predictions)
             tag = self.__labels[results_index]
             if user_input.find('--confidence') != -1:
@@ -126,5 +123,4 @@ class Chatbot:
 
 if __name__ == "__main__":
     chatbot = Chatbot()
-
     chatbot.chat()
