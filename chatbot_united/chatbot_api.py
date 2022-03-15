@@ -9,6 +9,10 @@ from tensorflow import keras
 
 # from offers.text_preprocessor import TextPreprocessor
 from text_preprocessor import TextPreprocessor
+from brain.math import do_math
+from brain.birthdates import wikipedia_age_search, birthdate_finder
+from brain.which_time import which_time
+from brain.wikipedia_search import wikipedia_search
 
 
 class Chatbot:
@@ -21,7 +25,7 @@ class Chatbot:
         self.threshold = threshold
 
         words = []
-        print("chatbot-offers init")
+        print("chatbot-united init")
         self.__text_preprocessor = TextPreprocessor()
         # %%
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -68,26 +72,57 @@ class Chatbot:
         else:
             print("Nie zrozumiałem, proszę zadaj inne pytanie.")
 
+
     def chat(self):
-        print("Nexiobot na Ciebie czeka! [napisz 'koniec' aby zakończyć rozmowę]")
+        print("Cześć! W czym Ci mogę pomóc? [napisz 'koniec' aby zakończyć rozmowę]")
         while True:
             user_input = input("You:")
             if user_input.lower() == "koniec":
                 break
-            
-            bag =  self.bag_of_words(sentence=user_input, words=self.__words)
-
-            results = self.__model.predict(np.array([bag]))
-            results_index = np.argmax(results)
+            results1 = self.bag_of_words(user_input, words=self.__words)
+            results1 = np.array([results1])
+            predictions = self.__model.predict(results1)
+            results_index = np.argmax(predictions)
             tag = self.__labels[results_index]
-                        
-            if results[0][results_index] > self.threshold:
+            if user_input.find('--confidence') != -1:
+                print('confidence:', predictions[0][results_index])
+            if user_input.find('--tag') != -1:
+                print('tag:', tag)
+            if predictions[0][results_index] > self.threshold:
                 for t in self.__data["intents"]:
                     if t['tag'] == tag:
-                        responses = t['responses']
-                        print(random.choice(responses))
+    #                     print(tag)
+                        if tag == 'wikipedia':
+                            responses = t['responses']
+                            print(random.choice(responses))
+                            wikipedia_search(query=user_input.lower())
+                        elif tag == 'google':
+                            responses = t['responses']
+                            print(random.choice(responses))
+                            print('under construction')
+                            # google(query=user_input.lower())
+                        elif tag == 'wikipedia-age':
+                            responses = t['responses']
+                            print(random.choice(responses))
+                            wikipedia_age_search(query=user_input.lower())
+                        elif tag == 'smalltalk-math':
+                            responses = t['responses']
+                            print(random.choice(responses))
+                            do_math(query=user_input.lower())
+                        elif tag == 'smalltalk-time':
+                            responses = t['responses']
+                            print(random.choice(responses))
+                            which_time()
+                        elif tag == 'smalltalk-weather':
+                            responses = t['responses']
+                            print(random.choice(responses))
+                            print('under construction')
+                            # show_temperature()
+                        else:
+                            responses = t['responses']
+                            print(random.choice(responses))
             else:
-                print("Nie zrozumiałem, proszę zadaj inne pytanie.")
+                print("Nie zrozumiałem, proszę zadaj inne pytanie")
 
 if __name__ == "__main__":
     chatbot = Chatbot()
