@@ -993,6 +993,18 @@
   "responses": [
     "Chcesz sprawdzić pogodę? Potwierdz proszę miasto jakie Cię interesuje"
   ]
+},
+{
+  "tag": "smalltalk-thanks",
+  "patterns": [
+    "dziękuję",
+    "bardzo dziękuję",
+    "dziękuję za pomoc"
+  ],
+  "responses": [
+    "Do usług!",
+    "Proszę bardzo"
+  ]
 }
 
 
