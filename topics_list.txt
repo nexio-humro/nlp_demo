@@ -1,0 +1,60 @@
+Tematy w których robot powinien swobodnie odpowiadać (z możliwością poszerzenia):
+BIZNESOWE:
+1.godziny otwarcia 
+2.oferta nielimitowanych sms
+3.oferta internet w abonamencie
+4.oferta netflixa
+5.czas umowy
+6.typy dostępnych telefonów
+7.typy dostępnych ofert
+8.oferta mix
+9.pakiety internetu mobilnego
+10.oferta internetu stacjonarnego
+11.koszta internetu stacjonarnego
+12.opłaty aktywacjne internetu stacjonarnego
+13.koszta modemu 
+14.internet stacjonary ukryte koszta 
+15.korzystanie z internetu i telefonu w tym samym momencie
+16.instalacja modemu
+17.oferta internetu bez telefonu
+18.brak internetu stacjonarnego w konretnej lokalizacji
+19.limit transferu danych
+20.dostępność sieć 5g
+21.dostępność magenta box
+22.dostępność światłowodów
+23.możliwośc zakupu na fakturę
+24.ofery dla firm
+25.promocje
+26.rodzaje opłatności
+27.uniwersalny koszt ofery [WEDŁUG MNIE DO USUNIĘCIA/MODYFIKACJI]
+28.uniwersalny czas trwania oferty [WEDŁUG MNIE DO USUNIĘCIA/MODYFIKACJI]
+29.oferty świąteczne
+30.oferty rodzinne
+31.dostępność nju mobile
+32.doładowanie konta
+33.oferta studencka
+34.przedstawienie się
+35.najbliższy przystanek autobusowy
+36.brak widoczności oferty [WEDŁUG MNIE DO USUNIĘCIA/MODYFIKACJI]
+37.obsługa google [UNDER CONSTRUCTION]
+38.integracja wiedzy z modułem wikipedii (postacie, bitwy, daty urodzenia, książki i wiele wiele innych)
+
+SMALL TALK:
+1.whatsup
+2.greetings
+3.gossip
+4.jokes
+5.food
+6.sport
+7.films
+8.serials
+9.emotions
+10.fear
+11.health
+12.integracja z modułem matematycznym
+13.curse
+14.proverbs (przysłowia)
+15.gym
+16.intergracja z modułem czasu rzeczywistego (== po prostu zna aktualną godzinę ;))
+17.games
+18.integracja z modułem pogody [UNDER CONSTRUCTION]

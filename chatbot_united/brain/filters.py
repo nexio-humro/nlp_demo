@@ -32,6 +32,8 @@ def query_filter(query):
     query = query.replace("podzielić", "/")
     query = query.replace("podzielic", "/")
     query = query.replace("razy", "*")
+    query = query.replace("x", "*")
+    
     #books
     query = query.replace("kto napisał", "")
     query = query.replace("autor", "")

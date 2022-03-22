@@ -2,6 +2,8 @@ import json
 import os
 import pickle
 import random
+
+from matplotlib.pyplot import text
 import nltk
 import numpy as np
 from tensorflow import keras
@@ -11,8 +13,8 @@ from brain.math import do_math
 from brain.birthdates import wikipedia_age_search, birthdate_finder
 from brain.which_time import which_time
 from brain.wikipedia_search import wikipedia_search
-
-
+from brain.voice import text_to_speech
+from brain.voice import speech_to_text
 class Chatbot:
     __text_preprocessor: TextPreprocessor
     __tag_history = []
@@ -32,7 +34,7 @@ class Chatbot:
         with open(current_dir + '\data\data.pickle', 'rb') as f:
             self.__words, self.__labels, self.__training, self.__output = pickle.load(f)
 
-        self.__model = keras.models.load_model(current_dir + '/models/model/chatbot.keras')
+        self.__model = keras.models.load_model(current_dir + '/models/model/united_model')
         for intent in self.__data["intents"]:
             for pattern in intent["patterns"]:
                     tokenized_pattern = nltk.word_tokenize(pattern.lower())
@@ -70,57 +72,86 @@ class Chatbot:
             print("Nie zrozumiałem, proszę zadaj inne pytanie.")
 
 
-    def chat(self):
+    def chat(self, voice=False):
         print("Cześć! W czym Ci mogę pomóc? [napisz 'koniec' aby zakończyć rozmowę]")
+        if voice==True:
+            text_to_speech("Cześć! W czym Ci mogę pomóc? [aby zakończyć rozmowę powiedz 'koniec']")
         while True:
-            user_input = input("You:")
-            if user_input.lower() == "koniec":
-                break
-            common_words = self.bag_of_words(user_input, all_words=self.__words)
-            common_words = np.array([common_words])
-            predictions = self.__model.predict(common_words)
-            results_index = np.argmax(predictions)
-            tag = self.__labels[results_index]
-            if user_input.find('--confidence') != -1:
-                print('confidence:', predictions[0][results_index])
-            if user_input.find('--tag') != -1:
-                print('tag:', tag)
-            if predictions[0][results_index] > self.threshold:
-                for t in self.__data["intents"]:
-                    if t['tag'] == tag:
-    #                     print(tag)
-                        if tag == 'wikipedia':
-                            responses = t['responses']
-                            print(random.choice(responses))
-                            wikipedia_search(query=user_input.lower())
-                        elif tag == 'google':
-                            responses = t['responses']
-                            print(random.choice(responses))
-                            print('under construction')
-                            # google(query=user_input.lower())
-                        elif tag == 'wikipedia-age':
-                            responses = t['responses']
-                            print(random.choice(responses))
-                            wikipedia_age_search(query=user_input.lower())
-                        elif tag == 'smalltalk-math':
-                            responses = t['responses']
-                            print(random.choice(responses))
-                            do_math(query=user_input.lower())
-                        elif tag == 'smalltalk-time':
-                            responses = t['responses']
-                            print(random.choice(responses))
-                            which_time()
-                        elif tag == 'smalltalk-weather':
-                            responses = t['responses']
-                            print(random.choice(responses))
-                            print('under construction')
-                            # show_temperature()
-                        else:
-                            responses = t['responses']
-                            print(random.choice(responses))
+            if voice==True:
+                user_input = str(speech_to_text())
             else:
-                print("Nie zrozumiałem, proszę zadaj inne pytanie")
+                user_input = input("You:")
+            if user_input != '0':
+                if user_input.lower() == "koniec":
+                    break
+                common_words = self.bag_of_words(user_input, all_words=self.__words)
+                common_words = np.array([common_words])
+                predictions = self.__model.predict(common_words)
+                results_index = np.argmax(predictions)
+                tag = self.__labels[results_index]
+                if user_input.find('--confidence') != -1:
+                    print('confidence:', predictions[0][results_index])
+                if user_input.find('--tag') != -1:
+                    print('tag:', tag)
+                if predictions[0][results_index] > self.threshold:
+                    for t in self.__data["intents"]:
+                        if t['tag'] == tag:
+        #                     print(tag)
+                            if tag == 'wikipedia':
+                                responses = t['responses']
+                                print(random.choice(responses))
+                                result = wikipedia_search(query=user_input.lower(), voice=voice)
+                                print(result)
+                                if voice==True:
+                                    text_to_speech(result)
+                                # if voice==True:
+                                #     text_to_speech(wikipedia_search(query=user_input.lower(), voice=voice))
+                                # else:
+                                #     print(wikipedia_search(query=user_input.lower(), voice=voice))
+                            elif tag == 'google':
+                                responses = t['responses']
+                                print(random.choice(responses))
+                                print('under construction')
+                                # google(query=user_input.lower())
+                            elif tag == 'wikipedia-age':
+                                responses = t['responses']
+                                print(random.choice(responses))
+                                result = wikipedia_age_search(query=user_input.lower(), voice=voice)
+                                print(result)
+                                if voice==True:
+                                    text_to_speech(result)
+                            elif tag == 'smalltalk-math':
+                                responses = t['responses']
+                                print(random.choice(responses))
+                                print(do_math(query=user_input.lower()))
+                                if voice==True:
+                                    text_to_speech(random.choice(responses))
+                                    text_to_speech(do_math(query=user_input.lower()))
+                                
+                            elif tag == 'smalltalk-time':
+                                responses = t['responses']
+                                answer = random.choice(responses)
+                                print(answer)
+                                print(which_time())
+                                if voice==True:
+                                    text_to_speech(answer)
+                                    text_to_speech(which_time())
+                            elif tag == 'smalltalk-weather':
+                                responses = t['responses']
+                                print(random.choice(responses))
+                                print('under construction')
+                                # show_temperature()
+                            else:
+                                responses = t['responses']
+                                answer = random.choice(responses)
+                                print(answer)
+                                if voice==True:
+                                    text_to_speech(answer)
+                else:
+                    print("Nie zrozumiałem, proszę zadaj inne pytanie")
+                    if voice==True:
+                        text_to_speech("Nie zrozumiałem, proszę zadaj inne pytanie")
 
 if __name__ == "__main__":
     chatbot = Chatbot()
-    chatbot.chat()
+    chatbot.chat(voice=True)

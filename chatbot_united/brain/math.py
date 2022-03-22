@@ -8,6 +8,6 @@ def do_math(query):
         remove_not_math_chars = re.compile(r'[0123456789+-/*()]')
         query_filtered_list = remove_not_math_chars.findall(query_filtered)
         query_filtered = ''.join(query_filtered_list)
-        print(eval(query_filtered))
+        return round(eval(query_filtered), 2)
     except:
         pass
