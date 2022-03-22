@@ -167,16 +167,15 @@
     {
       "tag": "landline_internet_options",
       "patterns": [
-        "Jakie są dostępne opcje usługi internet",
+        "Jakie są dostępne opcje usługi internetu stacjonarnego",
         "Jaki jest możliwy internet",
         "jaki internet mogę założyć",
         "chcę założyć internet",
-        "kiedy założą mi internet",
         "chcę założyć internet stacjonarny",
         "usługa internetu"
       ],
       "responses": [
-        "Internet stacjonarny możliwy w opcjach jeden dwa lub sześć megabitów na sekunde",
+        "Internet stacjonarny możliwy w opcjach jeden, dwa lub sześć megabitów na sekunde",
         "Wyświetlam dane oferty internetu stacjonarnego na ekranie"
       ]
     },
@@ -305,7 +304,7 @@
         "limit dla transferu"
       ],
       "responses": [
-        "Nie Użytkownik może pobierać i wysyłać nieograniczoną ilość danych a za usługę płaci stały miesięczny abonament"
+        "Nie, użytkownik może pobierać i wysyłać nieograniczoną ilość danych, a za usługę płaci stały miesięczny abonament"
       ]
     },
     {
@@ -676,7 +675,8 @@
   "patterns": [
     "poplotkujmy",
     "poplotkujesz ze mną",
-    "znasz jakieś plotki"
+    "znasz jakieś plotki",
+    "ploteczki"
   ],
   "responses": [
     "Od czasu do czasu słyszę różne rzeczy",
@@ -848,6 +848,7 @@
     "9 * 8 ",
     "51 podzielić na 4",
     "997 / 2",
+    "44 /66.8",
     "88 razy 6",
     "2 do potęgi 6",
     "5 ^ 4",
@@ -880,6 +881,7 @@
   "tag": "smalltalk-quick2",
   "patterns": [
     "ok",
+    "okej",
     "gitara",
     "dobra"
   ],
@@ -992,6 +994,18 @@
   ],
   "responses": [
     "Chcesz sprawdzić pogodę? Potwierdz proszę miasto jakie Cię interesuje"
+  ]
+},
+{
+  "tag": "smalltalk-thanks",
+  "patterns": [
+    "dziękuję",
+    "bardzo dziękuję",
+    "dziękuję za pomoc"
+  ],
+  "responses": [
+    "Do usług!",
+    "Proszę bardzo"
   ]
 }
 
