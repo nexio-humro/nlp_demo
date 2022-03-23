@@ -7,7 +7,7 @@ from matplotlib.pyplot import text
 
 engine = tts.init()
 engine.setProperty('rate', 130)
-
+engine.setProperty('voice', 'polish')
 
 def text_to_speech(text):
     engine.say(text)
