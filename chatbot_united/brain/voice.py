@@ -33,6 +33,7 @@ def speech_to_text():
 
 
 def record():
+    recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         try:
             print("nasłuchuję...")
@@ -47,6 +48,17 @@ def record():
             return 0
         except:
             return 0
+
+def mp3_to_text(filename):
+    r = sr.Recognizer()
+    jackhammer = sr.AudioFile(filename)
+    with jackhammer as source:
+        audio = r.record(source)
+        text = r.recognize_google(audio)
+        print(text)
+        return text
+        
+
 
 # mow('cześć jestem robotem firmy neksjo bardzo mi miło')
 # while True:
