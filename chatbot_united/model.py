@@ -102,6 +102,6 @@ model = keras.Sequential(
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 model.fit(training, output, epochs=400,batch_size=34, verbose=1)
+model.save(r'C:\Users\lenovo\Desktop\nlp_demo\models\model')
 
 #%%
-model.save(current_dir + '/models/model')

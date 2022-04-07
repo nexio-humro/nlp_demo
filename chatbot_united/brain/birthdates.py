@@ -13,7 +13,7 @@ def birthdate_finder(query, voice):
         for i in range(len(search)):
             print(f'{search[i]}, tak?')
             if voice==True:
-                text_to_speech(f'{search[i]}, tak?')
+                text_to_speech(f'{search[i]}. tak?')
                 user_answer = str(speech_to_text())
             else:
                 user_answer = input("You:")
@@ -26,11 +26,11 @@ def birthdate_finder(query, voice):
                 return int(birthdate), article_summary
         print("Poddaję się, zadaj proszę inne pytanie")
         if voice==True:
-            text_to_speech("Poddaję się, zadaj proszę inne pytanie")
+            text_to_speech("Poddaję się. zadaj proszę inne pytanie")
     except:
         print("Niestety nie rozumiem, spróbuj proszę zapytać proszę o coś innego.")
         if voice==True:
-            text_to_speech("Niestety nie rozumiem, spróbuj proszę zapytać proszę o coś innego.")
+            text_to_speech("Niestety nie rozumiem. spróbuj proszę zapytać proszę o coś innego.")
 
 
 def wikipedia_age_search(query, voice):

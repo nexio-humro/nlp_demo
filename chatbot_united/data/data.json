@@ -661,7 +661,8 @@
         "witaj",
         "witam",
         "cześć",
-        "hej"
+        "hej",
+        "dzień dobry"
       ],
       "responses": [
         "Cześć! W czym mogę pomóc?",
@@ -707,7 +708,7 @@
     "Najlepszym dowodem na to, że w kosmosie istnieje inteligencja, jest to, że się z nami nie kontaktują.",
     "Alfred Nobel jest uważany za wynalazcę dynamitu tylko dlatego, że poprzednich wynalazców nie udało się zidentyfikować.",
     "Przychodzi Pierre Curie do Marii i mówi:\n- Kochanie, ależ dziś promieniejesz!\n- Jestem taka uradowana...",
-    "Rozmawia dwóch informatyków:\n- Stary wpadnij do mnie, będzie impreza: muzyka, drinki, panienki!\n- Muzyka OK, drinki OK, a tych panienek ile będzie?\n- Z 8 GB"
+    "Rozmawia dwóch informatyków:\n- Stary wpadnij do mnie, będzie impreza: muzyka, drinki, panienki!\n- Muzyka OK, drinki OK, a tych panienek ile będzie?\n- Z osiem GB"
   ]
 },
 {
@@ -1007,7 +1008,22 @@
     "Do usług!",
     "Proszę bardzo"
   ]
+},
+{
+  "tag": "smalltalk-currency",
+  "patterns": [
+    "znasz kursy walut",
+    "czy znasz kurs dolara",
+    "jaki jest kurs euro",
+    "kurs franka szwajcarskiego",
+    "kurs złotego"
+  ],
+  "responses": [
+    "Już sprawdzam...",
+    "Hyym.."
+  ]
 }
+
 
 
   ]}

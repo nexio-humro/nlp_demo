@@ -11,10 +11,12 @@ from tensorflow import keras
 from text_preprocessor import TextPreprocessor
 from brain.math import do_math
 from brain.birthdates import wikipedia_age_search, birthdate_finder
+from brain.filters import commas_to_dots
 from brain.which_time import which_time
 from brain.wikipedia_search import wikipedia_search
 from brain.voice import text_to_speech
 from brain.voice import speech_to_text
+from brain.currency import get_rate_x_to_pln
 class Chatbot:
     __text_preprocessor: TextPreprocessor
     __tag_history = []
@@ -28,10 +30,10 @@ class Chatbot:
         self.__text_preprocessor = TextPreprocessor()
         # %%
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        with open(current_dir + '\data\data.json', encoding='utf8') as file:
+        with open(os.path.join(current_dir,'data', 'data.json'), encoding='utf8') as file:
             self.__data = json.load(file)
 
-        with open(current_dir + '\data\data.pickle', 'rb') as f:
+        with open(os.path.join(current_dir ,'data', 'data.pickle'), 'rb') as f:
             self.__words, self.__labels, self.__training, self.__output = pickle.load(f)
 
         self.__model = keras.models.load_model(current_dir + '/models/model/united_model')
@@ -123,11 +125,11 @@ class Chatbot:
                             elif tag == 'smalltalk-math':
                                 responses = t['responses']
                                 print(random.choice(responses))
-                                print(do_math(query=user_input.lower()))
+                                result = do_math(query=user_input.lower())
                                 if voice==True:
                                     text_to_speech(random.choice(responses))
-                                    text_to_speech(do_math(query=user_input.lower()))
-                                
+                                    text_to_speech(str(result))
+                                print(result)
                             elif tag == 'smalltalk-time':
                                 responses = t['responses']
                                 answer = random.choice(responses)
@@ -141,17 +143,27 @@ class Chatbot:
                                 print(random.choice(responses))
                                 print('under construction')
                                 # show_temperature()
+                                
+                            elif tag == 'smalltalk-currency':
+                                responses = t['responses']
+                                # print(random.choice(responses))
+                                result = get_rate_x_to_pln(query=user_input.lower(), voice=voice)
+                                if voice==True:
+                                    text_to_speech(result)
+                                print(result)
+                                # show_temperature() 
                             else:
                                 responses = t['responses']
                                 answer = random.choice(responses)
                                 print(answer)
                                 if voice==True:
+                                    answer = commas_to_dots(answer)
                                     text_to_speech(answer)
                 else:
                     print("Nie zrozumiałem, proszę zadaj inne pytanie")
                     if voice==True:
-                        text_to_speech("Nie zrozumiałem, proszę zadaj inne pytanie")
+                        text_to_speech("Nie zrozumiałem. proszę zadaj inne pytanie")
 
 if __name__ == "__main__":
     chatbot = Chatbot()
-    chatbot.chat(voice=True)
+    chatbot.chat(voice=False)

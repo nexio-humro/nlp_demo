@@ -58,3 +58,4 @@ SMALL TALK:
 16.intergracja z modułem czasu rzeczywistego (== po prostu zna aktualną godzinę ;))
 17.games
 18.integracja z modułem pogody [UNDER CONSTRUCTION]
+19.currencies (zna kursy kilku najpopularniejszych walut - w czasie rzeczywistym)

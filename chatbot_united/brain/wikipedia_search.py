@@ -39,10 +39,10 @@ def wikipedia_search(query, voice):
                         break
         print("Poddaję się, zadaj proszę inne pytanie")
         if voice==True:
-            text_to_speech("Poddaję się, zadaj proszę inne pytanie")
+            text_to_speech("Poddaję się. zadaj proszę inne pytanie")
     except Exception as E:
         print(E)
         print("Poddaję się, zadaj proszę inne pytanie")
         if voice==True:
-            text_to_speech("Poddaję się, zadaj proszę inne pytanie")
+            text_to_speech("Poddaję się. zadaj proszę inne pytanie")
 

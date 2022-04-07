@@ -39,8 +39,36 @@ def query_filter(query):
     query = query.replace("autor", "")
     query_filtered = query.lstrip()
     return query_filtered
+def currency_symbol_swap(query):
+    #currency
+    query = query.replace("franki szwajcarskie", "CHF")
+    query = query.replace("frank szwajcarski", "CHF")
+    query = query.replace("euro", "EUR")
+    query = query.replace("dolary amerykańskie", "USD")
+    query = query.replace("dolar amerykański", "USD")
+    query = query.replace("dolary kanadyjskie", "CAD")
+    query = query.replace("dolar kanadyjski", "CAD")
+    query = query.replace("funty szterlingi", "GBP")
+    query = query.replace("funt szterling", "GBP")
+    query = query.replace("funty angielskie", "GBP")
+    query = query.replace("funt angielski", "GBP")
+    query = query.replace("funty brytyjskie", "GBP")
+    query = query.replace("funt brytyjski", "GBP")
+    query = query.replace("funty", "GBP")
+    query = query.replace("funt", "GBP")
+    query = query.replace("dolar kanadyjski", "CAD")
+    query = query.replace("jeny japońskie", "JPY")
+    query = query.replace("jen japoński", "JPY")
+    
+    query_filtered = query.lstrip()
+    
+    return query_filtered
 
 def nested_dot_filter(sentences):
     trimmed_sentences = re.sub("[\(\[].*?[\)\]]", "", sentences)
     trimmed_sentences = trimmed_sentences.replace(")", "").replace("(", "")
     return trimmed_sentences
+
+def commas_to_dots(sentences):
+    sentences_filtered = sentences.replace(",", ".")
+    return sentences_filtered
