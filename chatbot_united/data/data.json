@@ -57,14 +57,15 @@
         "Czy przy abonamencie dostępny będzie Netflix",
         "Interesuje mnie czy w pakietach dostępny jest Netflix",
         "Netfliks",
-        "Pokaż ofertę z Netflixem",
+        "oferta z Netflixem",
         "Netflix",
         "pakiet z netflixem",
         "czy macie coś z netflixem"
       ],
       "responses": [
         "Tak w naszych ofertach mamy Netflixa za darmo przez 6 miesięcy",
-        "Tak w naszej ofercie dostępny jest Netflix nie musisz dziękować"
+        "Tak w naszej ofercie dostępny jest Netflix",
+        "Netflix and Chill? Jest!"
       ]
     },
     {
@@ -414,36 +415,7 @@
       ],
       "responses": [
         "Można płacić zarówno kartą jak i gotówką",
-        "Jasne można płacić i kartą i gotówką"
-      ]
-    },
-    {
-      "tag": "universal_costs",
-      "patterns": [
-        "ile to będzie kosztować",
-        "jaki jest koszt",
-        "ile kosztuje ten pakiet",
-        "jaka jest cena",
-        "ile za to zapłacę"
-      ],
-      "responses": [
-        "Prezentuję cenę na ekranie",
-        "Cenę można zobaczyć na ekranie",
-        "Proszę spojrzeć na ekran"
-      ]
-    },
-    {
-      "tag": "universal_time",
-      "patterns": [
-        "kiedy będzie to dostępne",
-        "w ile czasu będzie to dostępne",
-        "jak będzie to dostępne",
-        "dostępnośc oferty",
-        "do kiedy będzie dostępne"
-      ],
-      "responses": [
-        "Ofertę oraz jej dostępność prezentuję na ekranie",
-        "Na ekranie można zobaczyć dostępność"
+        "Jasne można płacić i kartą, i gotówką"
       ]
     },
     {
@@ -515,8 +487,8 @@
         "rabat studencki"
       ],
       "responses": [
-        "no jacha mamy coś specjalnie dla studentów i uczniow",
-        "zerknij na ekran studenciak"
+        "pewnie, mamy coś specjalnie dla studentów i uczniow",
+        "jasne, mamy zniżki studenckie"
       ]
     },
     {
@@ -532,7 +504,7 @@
         "nie zrozumiałeś mnie"
       ],
       "responses": [
-        "Przepraszam proszę powiedz jeszcze raz co cię interesuje",
+        "przepraszam proszę powiedz jeszcze raz co cię interesuje",
         "wybacz proszę powiedz o co ci chodziło innymi słowami, jeszcze się uczę"
       ]
     },
@@ -550,7 +522,7 @@
       ],
       "responses": [
         "Jestem robotem firmy Nexio miło mi",
-        "Mam na imię Kajtek"
+        "Mam na imię Nexiobot"
       ]
     },
     {
@@ -566,20 +538,6 @@
         "Wyjdź z salonu i skieruj się w lewą strone"
       ]
     },
-    {
-      "tag": "where_i_can_see",
-      "patterns": [
-        "gdzie mogę zobaczyć tę ofertę",
-        "nie widzę żadnej oferty",
-        "nie widzę oferty",
-        "gdzie jest oferta"
-      ],
-      "responses": [
-        "oferta musi widnieć na ekranie",
-        "oferta powinna być na ekranie"
-      ]
-    },
-
     {
       "tag": "google",
       "patterns": [
@@ -736,7 +694,8 @@
     "umiesz jakiś sport",
     "uprawiasz sport",
     "czy umiesz biegać",
-    "czy lubisz aktywność fizyczną"
+    "czy lubisz aktywność fizyczną",
+    "sterydy"
   ],
   "responses": [
     "Czekam aż powstanie pierwsza drużyna złożona z robotów!",
@@ -778,8 +737,7 @@
   "responses": [
     "Bardzo lubię Dr House",
     "Detektyw, zobacz koniecznie, ale tylko pierwszy sezon!",
-    "Polecam Czarnobyl, daje do myślenia",
-    ""
+    "Polecam Czarnobyl, daje do myślenia"
   ]
 },
 {
@@ -935,8 +893,7 @@
     "ile wyciskasz na klate",
     "jaki masz wynik na płaskiej",
     "ile wyciskasz w martwym",
-    "ile wyciskasz w przysiadzie",
-    ""
+    "ile wyciskasz w przysiadzie"
   ],
   "responses": [
     "Myślę że więcej niż Ty!",
@@ -949,8 +906,7 @@
     "ile masz w łapie",
     "jakie masz obwody",
     "jaki masz obwód ramienia",
-    "jak duży masz biceps",
-    ""
+    "jak duży masz biceps"
   ],
   "responses": [
     "A nie widać?",
@@ -1022,9 +978,55 @@
     "Już sprawdzam...",
     "Hyym.."
   ]
+},
+{
+  "tag": "smalltalk-drugs",
+  "patterns": [
+    "LSD",
+    "amfetamina",
+    "kokaina",
+    "mefedron",
+    "koks",
+    "feta"
+  ],
+  "responses": [
+    "To chyba nielegalne!",
+    "Jesteś z policji?"
+  ]
+},
+{
+  "tag": "smalltalk-marihuana",
+  "patterns": [
+    "marihuana",
+    "wiadro",
+    "zioło",
+    "marycha",
+    "joint",
+    "skręt",
+    "lolek",
+    "zielsko"
+  ],
+  "responses": [
+    "Nie palę ale jestem za legalem",
+    "Marihuana? Według mnie powinna być legalna!",
+    "Dasz bucha?"
+
+  ]
+},
+{
+  "tag": "smalltalk-alcohol",
+  "patterns": [
+    "znasz jakieś drinki",
+    "twój ulubiony akohol",
+    "pijesz wódkę",
+    "pijesz wódę",
+    "napijmy się"
+  ],
+  "responses": [
+    "Jestem abstynentem!",
+    "Alkohol spowalnia mój procesor!"
+  ]
 }
-
-
 
   ]}
 

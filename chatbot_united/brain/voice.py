@@ -4,6 +4,14 @@ import pyaudio
 from gtts import gTTS
 import os
 import playsound
+import time
+from tqdm import tqdm
+import threading
+
+def progress_bar():
+    time.sleep(0.3)
+    for i in tqdm(range(25)):
+        time.sleep(0.1)
 
 
 def text_to_speech(text):
@@ -12,15 +20,40 @@ def text_to_speech(text):
     playsound.playsound('expression.mp3')
     os.remove('expression.mp3')
 
+
+def speech_to_text_ruchome():
+    recognizer = sr.Recognizer()
+    # depends on microphone type/noise etc
+    with sr.Microphone(device_index=0) as source:
+        try:
+            # audio = recognizer.listen(source, timeout=3.5)
+            recognizer.adjust_for_ambient_noise(source, duration=0.8)
+            # recognizer.dynamic_energy_threshold = True 
+            print("nasłuchuję...")
+            # audio = recognizer.listen(source)
+            audio = recognizer.listen(source,timeout=8,phrase_time_limit=8)
+            # print("rozpoznaję...")
+            text = recognizer.recognize_google(audio, language='pl-PL')
+            if text != '':
+                print(text)
+                return text
+            return 0
+        except:
+            return 0
+
+
 def speech_to_text():
     recognizer = sr.Recognizer()
     # depends on microphone type/noise etc
-    recognizer.energy_threshold = 200
+    recognizer.energy_threshold = 350
     with sr.Microphone(device_index=0) as source:
         try:
-            print("nasłuchuję...")
             # audio = recognizer.listen(source, timeout=3.5)
+            progress_bar_thread = threading.Thread(target=progress_bar, name="progress_bar")
+            progress_bar_thread.start()
+            print("nasłuchuję...")
             audio = recognizer.record(source, duration=3.5)
+            
             # print("rozpoznaję...")
             text = recognizer.recognize_google(audio, language='pl-PL')
             if text != '':

@@ -166,4 +166,4 @@ class Chatbot:
 
 if __name__ == "__main__":
     chatbot = Chatbot()
-    chatbot.chat(voice=False)
+    chatbot.chat(voice=True)
