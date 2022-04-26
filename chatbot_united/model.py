@@ -91,9 +91,9 @@ input_shape = (training.shape[1],)
 
 model = keras.Sequential(
     [
-        layers.Dense(110, input_shape=input_shape, activation='relu'),
+        layers.Dense(160, input_shape=input_shape, activation='relu'),
         layers.Dropout(0.5),
-        layers.Dense(70, activation='relu'),
+        layers.Dense(90, activation='relu'),
         layers.Dropout(0.5),
         layers.Dense(len(output[0]), activation='softmax')
     ]

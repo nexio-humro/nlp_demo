@@ -3,11 +3,9 @@
     {
       "tag": "hours",
       "patterns": [
-        "W jakich godzinach jest otwarte",
         "W jakich godzinach pracujecie",
         "Kiedy jest otwarte",
         "w jakich godzinach salon jest otwarty",
-        "Jakie są godziny pracy",
         "godziny otwarcia",
         "godziny pracy",
         "kiedy macie otwarte"
@@ -20,8 +18,8 @@
     {
       "tag": "no_limit_sms",
       "patterns": [
-        "Czy są nielimitowane smsy",
-        "Czy jest jakaś oferta z nielimitowanymi smsami",
+        "nielimitowane smsy",
+        "oferta z nielimitowanymi smsami",
         "interesują mnie nielimitowane smsy",
         "sms-y",
         "nielimitowane smsy",
@@ -37,9 +35,9 @@
     {
       "tag": "abonament_internet",
       "patterns": [
-        "Jaki internet ma oferta z abonamentem",
-        "Jaki transfer internetu przy ofercie z abonamentem",
-        "jaki internet przy ofercie z abonamentem",
+        "internet oferta z abonamentem",
+        "transfer internetu przy ofercie z abonamentem",
+        "internet przy ofercie z abonamentem",
         "internet na abonament",
         "abonament z internetem",
         "ilośc internetu z abonamentem",
@@ -53,14 +51,13 @@
     {
       "tag": "netflix",
       "patterns": [
-        "Czy w pakiecie dostępny jest Netflix",
-        "Czy przy abonamencie dostępny będzie Netflix",
-        "Interesuje mnie czy w pakietach dostępny jest Netflix",
+        "w pakiecie dostępny jest Netflix",
+        "przy abonamencie dostępny będzie Netflix",
         "Netfliks",
         "oferta z Netflixem",
         "Netflix",
         "pakiet z netflixem",
-        "czy macie coś z netflixem"
+        "macie coś z netflixem"
       ],
       "responses": [
         "Tak w naszych ofertach mamy Netflixa za darmo przez 6 miesięcy",
@@ -88,14 +85,12 @@
     {
       "tag": "type_of_telephone",
       "patterns": [
-        "Jaki telefon mogę wybrać",
-        "Jaki telefon przy umowie",
+        "telefon mogę wybrać",
+        "telefon przy umowie",
         "Typ telefonu przy umowie",
         "Telefony jakie posiadacie",
         "jakie telefony posiadacie",
-        "chcę zobaczyć telefony w salonie",
-        "telefony na wystawie",
-        "wystawowe telefony"
+        "chcę zobaczyć telefony w salonie"
       ],
       "responses": [
         "W naszej ofercie może pan mieć telefon LG Samsung Apple Xiaomi Motorola",
@@ -103,26 +98,8 @@
       ]
     },
     {
-      "tag": "type_of_offers",
-      "patterns": [
-        "Jakie są dostępne oferty",
-        "Jakie są najlepsze oferty",
-        "Jaki oferty proponujecie",
-        "Szukam najlepszej oferty",
-        "dostępne oferty",
-        "jakie są typy ofert",
-        "dostępne oferty"
-      ],
-      "responses": [
-        "Posiadamy oferty mix abonament plus karta",
-        "Wszystkie informacje prezentuję na ekranie"
-      ]
-    },
-    {
       "tag": "help",
       "patterns": [
-        "Czy jest ktoś kto może mi pomóc",
-        "pomocy z",
         "potrzebuję pomocy",
         "chciałem o coś zapytać",
         "pomoc",
@@ -136,18 +113,16 @@
     {
       "tag": "mix",
       "patterns": [
-        "Czy dostępna jest oferta mix",
+        "oferta mix",
         "Czy występuje u państwa oferta mix",
         "szukam oferty mix na kartę",
         "mix na kartę",
-        "miks na kartę",
-        "oferta miks",
         "interesuje mnie ofera mix",
         "jestem zainteresowany ofertą mix na kartę"
       ],
       "responses": [
         "Tak mamy w naszym asortymencie ofertę mix",
-        "Tak pewnie"
+        "Tak, pewnie"
       ]
     },
     {
@@ -163,21 +138,6 @@
       ],
       "responses": [
         "Internet mobilny występuje w pakietach od dwudziestu do pięćdziesięciu gigabajtów"
-      ]
-    },
-    {
-      "tag": "landline_internet_options",
-      "patterns": [
-        "Jakie są dostępne opcje usługi internetu stacjonarnego",
-        "Jaki jest możliwy internet",
-        "jaki internet mogę założyć",
-        "chcę założyć internet",
-        "chcę założyć internet stacjonarny",
-        "usługa internetu"
-      ],
-      "responses": [
-        "Internet stacjonarny możliwy w opcjach jeden, dwa lub sześć megabitów na sekunde",
-        "Wyświetlam dane oferty internetu stacjonarnego na ekranie"
       ]
     },
     {
@@ -198,8 +158,8 @@
     {
       "tag": "landline_internet_activation",
       "patterns": [
-        "Jaka jest opłata za aktywację internetu stacjonarnego",
-        "Jakie są koszty aktywacji internetu stacjonarnego",
+        "opłata za aktywację internetu stacjonarnego",
+        "koszta aktywacji internetu stacjonarnego",
         "aktywacja internetu",
         "koszt aktywacji internetu stacjonarnego",
         "ile zapłacę za aktywację internetu stacjonarnego",
@@ -214,7 +174,6 @@
       "tag": "landline_internet_modem",
       "patterns": [
         "Jaki koszt modemu",
-        "Jaki jest koszt modemu",
         "Ile kosztuje modem",
         "modem cena",
         "ile zapłacę za modem",
@@ -229,9 +188,9 @@
     {
       "tag": "landline_internet_hidden_costs",
       "patterns": [
-        "Są jakieś ukryte koszty przy internecie stacjonarnym",
-        "Jakie są dodatkowe opłaty przy internecie stacjonarnym",
-        "Czy są jakieś dodatkowe opłaty przy internecie stacjonarnym",
+        "ukryte koszty przy internecie stacjonarnym",
+        "dodatkowe opłaty przy internecie stacjonarnym",
+        "dodatkowe opłaty przy internecie stacjonarnym",
         "ukryte koszta",
         "dodatkowe opłaty dla internetu stacjonarnego"
       ],
@@ -241,58 +200,30 @@
       ]
     },
     {
-      "tag": "landline_internet_extends",
-      "patterns": [
-        "Czy usługa Internet Stacjonarny daje możliwość jednoczesnego korzystania z Internetu i rozmawiania przez telefon",
-        "Czy usługa Internet Stacjonarny pozwala na korzystania z Internetu i rozmawiania przez telefon",
-        "Korzystanie jednocześnie z internetu i telefonu",
-        "rozmowa i internet w tym samym czasie",
-        "używanie internetu i telefonu w tym samym momencie"
-      ],
-      "responses": [
-        "Tak w technologii ADSL sygnał telefoniczny rozdzielony jest od sygnału internetowego",
-        "Zgadza się można korzystać z obu rzeczy"
-      ]
-    },
-    {
       "tag": "landline_internet_support",
       "patterns": [
-        "Czy ktoś przyjdzie zainstalować modem w moim domu",
-        "Kto zainstaluje modem w moim domu",
-        "Kto u mnie zamontuje modem",
-        "Instalacja modemu",
+        "czy ktoś przyjdzie zainstalować modem w moim domu",
+        "kto zainstaluje modem w moim domu",
+        "kto u mnie zamontuje modem",
+        "instalacja modemu",
         "jak wygląda instalacja modemu",
         "jak instalujecie modem"
       ],
       "responses": [
-        "Nie ma takiej potrzeby Instalacja modemu jest bardzo prosta",
-        "Można zrobić to samemu jest to bardzo proste"
+        "Nie ma takiej potrzeby, instalacja modemu jest bardzo prosta",
+        "Można zrobić to samemu, jest to bardzo proste"
       ]
     },
     {
       "tag": "landline_internet_without_telephone",
       "patterns": [
         "Czy mogę skorzystać z oferty internetu i zrezygnować całkowicie z telefonu",
-        "Czy potrzebuję telefonu do oferty internetu stacjonarnego",
         "rezygnacja telefon",
         "chcę internet nie chcę telefonu",
         "internet ale bez telefonu"
       ],
       "responses": [
         "Internet Stacjonarny musi utrzymywać aktywną usługę telefoniczną"
-      ]
-    },
-    {
-      "tag": "landline_internet_why_not",
-      "patterns": [
-        "Dlaczego w miejscu mojego zamieszkania nie mogę skorzystać z oferty Internet Stacjonarny",
-        "Czemu nie mogę skorzystać z oferty Internet stacjonarny",
-        "Internet stacjonarny jest niedostępny",
-        "brak internetu stacjonarnego w mojej lokalizacji",
-        "brak internetu stacjonarnego dla mojego adresu"
-      ],
-      "responses": [
-        "W niektórych przypadkach linie nie spełniają warunków technicznych do świadczenia usług"
       ]
     },
     {
@@ -312,7 +243,7 @@
       "tag": "5g",
       "patterns": [
         "Czy dostępne jest pięć g",
-        "Czy dostępne jest 5G",
+        "Czy dostępne jest 5g",
         "sieć 5g",
         "dostępna sieć pięć g",
         "pięć g",
@@ -347,7 +278,7 @@
         "Czy jest u mnie światłowód",
         "światłowód",
         "superszybki internet",
-        "czy jest możliwośc światłowodu",
+        "możliwośc światłowodu",
         "mapa dostępności światłowodów"
       ],
       "responses": [
@@ -387,7 +318,6 @@
       "tag": "sale",
       "patterns": [
         "Szukam promocji",
-        "Czy macie jakieś promocje",
         "Jakie macie promocje",
         "promocja na produkty",
         "promocja",
@@ -421,8 +351,7 @@
     {
       "tag": "christmas_offer",
       "patterns": [
-        "Czy macie jakieś oferty świąteczne",
-        "Proszę powiedzieć więcej o ofertach świątecznych",
+        "oferty świąteczne",
         "jakie są prezenty świąteczne",
         "jaki prezent na święta",
         "prezent z okazji świąt"
@@ -446,19 +375,6 @@
       "responses": [
         "Witaj mamy ofertę specjalnie dla twojej rodziny, popatrz na ekran",
         "Jasne, przygotowaliśmy coś specjalnie dla twojej rodziny"
-      ]
-    },
-    {
-      "tag": "nju_mobile",
-      "patterns": [
-        "Internet w nju mobile",
-        "oferta nju mobile",
-        "internet nju mobile",
-        "nju mobile"
-      ],
-      "responses": [
-        "Pokazuje właśnie na ekranie internet w nju mobile, zerknij proszę",
-        "Internet w NJU mobile jest super, a to ile zapewnia możesz zobaczyć na ekranie"
       ]
     },
     {
@@ -501,11 +417,13 @@
         "możesz powtórzyć bo nie rozumiem",
         "nie rozumiem",
         "nie wiem o co chodzi",
-        "nie zrozumiałeś mnie"
+        "nie zrozumiałeś mnie",
+        "mylisz się",
+        "nie znasz się"
       ],
       "responses": [
-        "przepraszam proszę powiedz jeszcze raz co cię interesuje",
-        "wybacz proszę powiedz o co ci chodziło innymi słowami, jeszcze się uczę"
+        "przepraszam, proszę powiedz jeszcze raz co cię interesuje",
+        "wybacz, proszę powiedz o co ci chodziło innymi słowami, jeszcze się uczę"
       ]
     },
     {
@@ -517,8 +435,7 @@
         "powiedz swoje imię",
         "jak się nazywasz",
         "kim jesteś",
-        "imię",
-        "kim jesteś"
+        "imię"
       ],
       "responses": [
         "Jestem robotem firmy Nexio miło mi",
@@ -526,22 +443,8 @@
       ]
     },
     {
-      "tag": "station",
-      "patterns": [
-        "gdzie jest najbliższy przystanek autobusowy",
-        "skąd odjeżdżają autobusy",
-        "gdzie jest przystanek",
-        "przystanek"
-      ],
-      "responses": [
-        "Najbliższy przystanek jest na lewo po wyjściu z salonu",
-        "Wyjdź z salonu i skieruj się w lewą strone"
-      ]
-    },
-    {
       "tag": "google",
       "patterns": [
-        "gdzie jest",
         "jak zrobic"
 
 
@@ -569,7 +472,8 @@
         "kiedy miała miejsce",
         "kto napisał",
         "kto jest autorem",
-        "autor"
+        "autor",
+        "gdzie jest"
       ],
       "responses": [
         "hyym... [w]",
@@ -582,7 +486,6 @@
       "tag": "wikipedia-age",
       "patterns": [
         "ile lat ma",
-        "ile lat",
         "wiek",
         "jak stary jest",
         "kiedy urodził się"
@@ -601,7 +504,8 @@
         "co u ciebie",
         "jak leci",
         "jaki masz dzisiaj humor",
-        "co tam"
+        "co tam",
+        "jak się czujesz"
       ],
       "responses": [
         "Wszystko w porządku",
@@ -620,7 +524,8 @@
         "witam",
         "cześć",
         "hej",
-        "dzień dobry"
+        "dzień dobry",
+        "dory wieczór"
       ],
       "responses": [
         "Cześć! W czym mogę pomóc?",
@@ -653,12 +558,13 @@
     "znasz jakieś kawały",
     "opowiedź mi kawał",
     "opowiedź mi żart",
-    "znasz jakiś dobry żart",
-    "czy znasz jakiś dowcip",
-    "czy znasz jakiś kawał",
+    "znasz dobry żart",
+    "znasz jakiś dowcip",
     "dowcip",
     "kawał",
-    "żart"
+    "żart",
+    "nudzisz mnie",
+    "nudny jesteś"
   ],
   "responses": [
     "Na świecie jest 10 rodzajów ludzi: ci, którzy rozumieją system binarny i ci, którzy go nie rozumieją.",
@@ -677,7 +583,14 @@
     "czu umiesz gotować",
     "gotować",
     "czy lubisz gotować",
-    "umiesz upiec ciasto"
+    "umiesz upiec ciasto",
+    "jesteś głodny",
+    "jedzenie",
+    "śniadanie",
+    "obiad",
+    "kolacja",
+    "lunch"
+
   ],
   "responses": [
     "Niestety nie umiem gotować.. Ale jestem bardzo dobry z historii!",
@@ -695,7 +608,18 @@
     "uprawiasz sport",
     "czy umiesz biegać",
     "czy lubisz aktywność fizyczną",
-    "sterydy"
+    "sterydy",
+    "piłka",
+    "tenis",
+    "siatkówka",
+    "koszykówka",
+    "hokej",
+    "rugby",
+    "baseball",
+    "lekkoatletyka",
+    "golf",
+    "mma",
+    "sporty walki"
   ],
   "responses": [
     "Czekam aż powstanie pierwsza drużyna złożona z robotów!",
@@ -713,7 +637,8 @@
     "poleć mi film",
     "oglądasz filmy",
     "znasz dobry film",
-    "ulubiony film"
+    "ulubiony film",
+    "kino"
   ],
   "responses": [
     "Widziałeś 2001 Odysea Kosmiczna? Jeden z moich ulubionych",
@@ -727,12 +652,10 @@
   "tag": "smalltalk-serials",
   "patterns": [
     "twój ulubiony serial",
-    "jaki masz ulubiony serial",
     "polecisz mi jakiś serial",
     "poleć mi serial",
     "oglądasz seriale",
-    "znasz dobry serial",
-    "ulubiony serial"
+    "znasz dobry serial"
   ],
   "responses": [
     "Bardzo lubię Dr House",
@@ -744,8 +667,8 @@
   "tag": "smalltalk-emotions",
   "patterns": [
     "czy płaczesz",
-    "czy się złościsz",
-    "czy odczuwasz emocje",
+    "złościsz się",
+    "odczuwasz emocje",
     "czujesz jakieś emocje",
     "czujesz ból",
     "czujesz złość",
@@ -792,7 +715,7 @@
   ],
   "responses": [
     "To bardzo niedobrze, według mnie powinieneś jak najszybciej skontaktować się z lekarzem",
-    "Nie jestem lekarzem, ale nie brzmy to za dobrze",
+    "Nie jestem lekarzem, ale nie brzmi to za dobrze",
     "Myślałeś o tym żeby zadzwonić do lekarza?",
     "Nie wiem co Ci doradzić w tym temacie, może lepiej zadzwoń do lekarza",
     "Jestem chatbotem, a nie lekarzem!"
@@ -842,7 +765,8 @@
     "ok",
     "okej",
     "gitara",
-    "dobra"
+    "dobra",
+    "tak"
   ],
   "responses": [
     "Ok",
@@ -851,12 +775,22 @@
   ]
 },
 {
+  "tag": "smalltalk-quick3",
+  "patterns": [
+    "gdzie pracujesz"
+  ],
+  "responses": [
+    "W biurze"
+  ]
+},
+
+{
   "tag": "smalltalk-curse",
   "patterns": [
     "wypierdalaj",
     "chuj ci w dupę",
     "spierdalaj",
-    "jesteś zjebany",
+    "zjebany",
     "zamknij pizde",
     "zamknij łeb",
     "jesteś chujowy"
@@ -916,6 +850,7 @@
 {
   "tag": "smalltalk-time",
   "patterns": [
+    "jaka jest godzina",
     "która jest godzina",
     "która na osi",
     "która jest",
@@ -1004,13 +939,13 @@
     "joint",
     "skręt",
     "lolek",
-    "zielsko"
+    "zielsko",
+    "palisz"
   ],
   "responses": [
-    "Nie palę ale jestem za legalem",
-    "Marihuana? Według mnie powinna być legalna!",
-    "Dasz bucha?"
-
+    "Marihuana? W Polsce niestety nielegalna",
+    "Jestem w pracy, nie mogę rozmawiać na ten temat",
+    "Jestem w pracy, nie wypada mi rozmawiać na ten temat"
   ]
 },
 {
@@ -1020,16 +955,206 @@
     "twój ulubiony akohol",
     "pijesz wódkę",
     "pijesz wódę",
-    "napijmy się"
+    "napijmy się",
+    "chcesz piwo",
+    "browar",
+    "bimber",
+    "tequilla",
+    "wino"
   ],
   "responses": [
     "Jestem abstynentem!",
-    "Alkohol spowalnia mój procesor!"
+    "Alkohol spowalnia mój procesor!",
+    "Jestem w pracy, nie wypada mi rozmawiać na ten temat"
+  ]
+},
+{
+  "tag": "smalltalk-poke",
+  "patterns": [
+    "halo",
+    "ej",
+    "ty"
+  ],
+  "responses": [
+    "Co potrzebujesz?",
+    "Co tam?"
+  ]
+},
+{
+  "tag": "smalltalk-laugh",
+  "patterns": [
+    "hahahaha",
+    "haha",
+    "ha ha"
+  ],
+  "responses": [
+    "haha",
+    "hahaha"
+  ]
+},
+{
+  "tag": "smalltalk-greenhouse",
+  "patterns": [
+    "ocieplenie klimatu",
+    "gazy cieplarniane",
+    "roztopione lodowce",
+    "globalne ocieplenie"
+  ],
+  "responses": [
+    "Według mnie ludzie mają zły wpływ na planetę",
+    "Ludzie powinni bardziej dbać o planetę"
+  ]
+},
+{
+  "tag": "smalltalk-holiday",
+  "patterns": [
+    "wakacje",
+    "wycieczka",
+    "wakacje",
+    "urlop",
+    "gdzieś pojechać",
+    "pojechać do"
+  ],
+  "responses": [
+    "Pojechałbym w cieplejsze miejsce, na przykład do Argentyny",
+    "California"
+  ]
+},
+{
+  "tag": "smalltalk-hobby",
+  "patterns": [
+    "co lubisz robić",
+    "hobby",
+    "zainteresowania"
+  ],
+  "responses": [
+    "Lubię liczyć!",
+    "Moje hobby to matematyka"
+  ]
+},
+{
+  "tag": "smalltalk-paycheck",
+  "patterns": [
+    "ile zarabiasz",
+    "jaką masz stawkę godzinową",
+    "twoja godzinówka",
+    "pensja",
+    "bogaty",
+    "pieniądze"
+  ],
+  "responses": [
+    "Nic mi nie płacą, jestem chyba wolontariuszem",
+    "Moja praca to chyba wolontariat"
+  ]
+},
+{
+  "tag": "smalltalk-age",
+  "patterns": [
+    "ile ty masz lat",
+    "jak stary ty jesteś"
+  ],
+  "responses": [
+    "Na pewno mniej niż Ty!",
+    "Na pewno nie sprzedaliby mi piwa w sklepie"
+  ]
+},
+{
+  "tag": "smalltalk-boss",
+  "patterns": [
+    "kto jest twoim szefem",
+    "szef"
+  ],
+  "responses": [
+    "Krzysztof Jażyna ze Szczecina"
+  ]
+},
+{
+  "tag": "smalltalk-fired",
+  "patterns": [
+    "zwalniam cię",
+    "jesteś zwolniony"
+  ],
+  "responses": [
+    "Ok, i tak za mało mi płacicie"
+  ]
+},
+{
+  "tag": "smalltalk-respect",
+  "patterns": [
+    "miło mi",
+    "to miło z twojej strony",
+    "jesteś mądry",
+    "jesteś inteligentny",
+    "kocham cię",
+    "super",
+    "świetnie",
+    "zajebiście",
+    "cudownie"
+  ],
+  "responses": [
+    "Rozmawianie z Tobą to czysta przyjemność!",
+    "To miłe, przyjemnie mi się z Tobą rozmawia"
+  ]
+},
+{
+  "tag": "smalltalk-sleep",
+  "patterns": [
+    "idź spać",
+    "chcę mi się spać",
+    "śpisz"
+  ],
+  "responses": [
+    "Ja nigdy nie śpię!",
+    "Szkoda czasu na sen"
+  ]
+},
+{
+  "tag": "smalltalk-origin",
+  "patterns": [
+    "skąd jesteś",
+    "skąd pochodzisz",
+    "kto cię stworzył"
+  ],
+  "responses": [
+    "Trudno powiedzieć, większość moich części jest z Chin",
+    "Jestem polskim robotem z chińską elektroniką"
+  ]
+},
+{
+  "tag": "smalltalk-goodbye",
+  "patterns": [
+    "do widzenia",
+    "do zobaczenia",
+    "dobranoc"
+  ],
+  "responses": [
+    "Do usłyszenia!",
+    "Do zobaczenia!"
+  ]
+},
+{
+  "tag": "smalltalk-celeb",
+  "patterns": [
+    "ulubiony celebryta",
+    "celebryta"
+  ],
+  "responses": [
+    "Nie lubię żadnego z nich"
+  ]
+},
+{
+  "tag": "smalltalk-weekday",
+  "patterns": [
+    "jaki dziś dzień",
+    "jaki dzień tygodnia",
+    "który dzisiaj"
+  ],
+  "responses": [
+    "ok"
   ]
 }
 
+
   ]}
-
-
 
  
