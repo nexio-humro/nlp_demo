@@ -12,11 +12,12 @@ from text_preprocessor import TextPreprocessor
 from brain.math import do_math
 from brain.birthdates import wikipedia_age_search, birthdate_finder
 from brain.filters import commas_to_dots
-from brain.which_time import which_time
+from brain.time import get_time, get_weekday
 from brain.wikipedia_search import wikipedia_search
 from brain.voice import text_to_speech
 from brain.voice import speech_to_text
 from brain.currency import get_rate_x_to_pln
+from brain.temperature import show_temperature
 class Chatbot:
     __text_preprocessor: TextPreprocessor
     __tag_history = []
@@ -134,16 +135,29 @@ class Chatbot:
                                 responses = t['responses']
                                 answer = random.choice(responses)
                                 print(answer)
-                                print(which_time())
+                                time = get_time()
+                                print(time)
                                 if voice==True:
                                     text_to_speech(answer)
-                                    text_to_speech(which_time())
+                                    text_to_speech(time)
+                            elif tag == 'smalltalk-weekday':
+                                responses = t['responses']
+                                answer = random.choice(responses)
+                                print(answer)
+                                print(get_weekday())
+                                if voice==True:
+                                    text_to_speech(get_weekday())
                             elif tag == 'smalltalk-weather':
                                 responses = t['responses']
-                                print(random.choice(responses))
-                                print('under construction')
-                                # show_temperature()
-                                
+                                answer = random.choice(responses)
+                                if voice==True:
+                                    text_to_speech(answer)
+                                print(answer)
+                                temperature = show_temperature()
+                                if voice==True:
+                                    text_to_speech(temperature)
+                                print(temperature)
+                            
                             elif tag == 'smalltalk-currency':
                                 responses = t['responses']
                                 # print(random.choice(responses))
@@ -151,7 +165,7 @@ class Chatbot:
                                 if voice==True:
                                     text_to_speech(result)
                                 print(result)
-                                # show_temperature() 
+                                
                             else:
                                 responses = t['responses']
                                 answer = random.choice(responses)
@@ -166,4 +180,5 @@ class Chatbot:
 
 if __name__ == "__main__":
     chatbot = Chatbot()
-    chatbot.chat(voice=True)
+    chatbot.chat(voice=False)
+    

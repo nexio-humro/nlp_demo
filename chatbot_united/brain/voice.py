@@ -45,8 +45,8 @@ def speech_to_text_ruchome():
 def speech_to_text():
     recognizer = sr.Recognizer()
     # depends on microphone type/noise etc
-    recognizer.energy_threshold = 350
-    with sr.Microphone(device_index=0) as source:
+    # recognizer.energy_threshold = 350
+    with sr.Microphone() as source:
         try:
             # audio = recognizer.listen(source, timeout=3.5)
             progress_bar_thread = threading.Thread(target=progress_bar, name="progress_bar")
