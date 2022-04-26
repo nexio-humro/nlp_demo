@@ -1,6 +1,17 @@
 import re
 def query_filter(query):
     #classic
+    query = re.sub(r"^.+?(?= co )", "", query)
+    query = re.sub(r"^.+?(?= powiedz )", "", query)
+    query = re.sub(r"^.+?(?= napisz )", "", query)
+    query = re.sub(r"^.+?(?= kto )", "", query)
+    query = re.sub(r"^.+?(?= kim )", "", query)
+    query = re.sub(r"^.+?(?= czy )", "", query)
+    query = re.sub(r"^.+?(?= ile )", "", query)
+    query = re.sub(r"^.+?(?= jak )", "", query)
+    query = re.sub(r"^.+?(?= wiek )", "", query)
+    query = re.sub(r"^.+?(?= kiedy )", "", query)
+    query = re.sub(r"^.+?(?= autor )", "", query)
     query = query.replace("co to jest ", "")
     query = query.replace("napisz mi kto ", "")
     query = query.replace("powiedz mi kto ", "")
@@ -10,6 +21,7 @@ def query_filter(query):
     query = query.replace("kim jest ", "")
     query = query.replace("czy wiesz ", "")
     query = query.replace("kto to jest ", "")
+    query = query.replace("kto jest ", "")
     query = query.replace("kto to był ", "")
     #age
     query = query.replace("ile lat ma", "")
@@ -18,7 +30,34 @@ def query_filter(query):
     query = query.replace("wiek", "")
     query = query.replace("kiedy była", "")
     query = query.replace("kiedy miała miejsce", "")
-    #math
+    #place
+    query = query.replace("gdzie jest ", "")
+    query = query.replace("gdzie leży ", "")
+    
+    #books
+    query = query.replace("kto napisał", "")
+    query = query.replace("autor", "")
+    query = query.replace("autorem", "")
+    query = query.replace("autorką", "")
+    query_filtered = query.lstrip()
+    return query_filtered
+
+
+def math_symbol_swap(query):
+    query = query.replace("jeden", "1")
+    query = query.replace("pierwszej", "1")
+    
+    query = query.replace("dwa", "2")
+    query = query.replace("drugiej", "2")
+    query = query.replace("trzeciej", "3")
+    query = query.replace("czwartej", "4")
+    query = query.replace("piątej", "5")
+    query = query.replace("szóstej", "6")
+    query = query.replace("siódmej", "7")
+    query = query.replace("ósmej", "8")
+    query = query.replace("dziewiątej", "9")
+    query = query.replace("dziesiątej", "10")
+
     query = query.replace("dodać", "+")
     query = query.replace("dodac", "+")
     query = query.replace("do potęgi", "**")
@@ -33,12 +72,10 @@ def query_filter(query):
     query = query.replace("podzielic", "/")
     query = query.replace("razy", "*")
     query = query.replace("x", "*")
-    
-    #books
-    query = query.replace("kto napisał", "")
-    query = query.replace("autor", "")
     query_filtered = query.lstrip()
     return query_filtered
+
+
 def currency_symbol_swap(query):
     #currency
     query = query.replace("franki szwajcarskie", "CHF")
