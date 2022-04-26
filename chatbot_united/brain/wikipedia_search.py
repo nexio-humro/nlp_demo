@@ -16,15 +16,20 @@ def wikipedia_search(query, voice):
             else:
                 user_answer = input("You:")
             if user_answer.find('nie') == -1:            
-                article_summary = wikipedia.summary(articles[i], sentences=6)
+                article_summary = wikipedia.summary(articles[i], sentences=9)
 
-                article_summary = article_summary.split("–")
+                article_summary = article_summary.split("– ")
                 article_summary = article_summary[1]
                 article_summary = article_summary.split("=")
                 article_summary = article_summary[0]
                 article_filtered = nested_dot_filter(article_summary)
                 article_filtered_splitted = article_filtered.split(".")
-                if len(article_filtered_splitted)>=3:
+                first_sentence_splitted = article_filtered_splitted[0].split()
+                if len(first_sentence_splitted) > 15:
+                    answer = article_filtered_splitted[0]
+                    return answer
+                    break
+                elif len(article_filtered_splitted)>=3:
                     answer = article_filtered_splitted[0] + '.' + article_filtered_splitted[1] + '.' + article_filtered_splitted[2] + '.'
                     # print(answer)
 
