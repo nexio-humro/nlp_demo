@@ -1,7 +1,7 @@
 {
   "intents": [
     {
-      "tag": "hours",
+      "tag": "smalltalk-hours",
       "patterns": [
         "W jakich godzinach pracujecie",
         "Kiedy jest otwarte",
@@ -16,24 +16,7 @@
       ]
     },
     {
-      "tag": "no_limit_sms",
-      "patterns": [
-        "nielimitowane smsy",
-        "oferta z nielimitowanymi smsami",
-        "interesują mnie nielimitowane smsy",
-        "sms-y",
-        "nielimitowane smsy",
-        "sms bez limitu",
-        "oferta nielimitowanych smsów",
-        "nielimitowane sms"
-      ],
-      "responses": [
-        "Tak mamy takie oferty proszę spojrzeć na ekran",
-        "Jasne są takie oferty oraz te z nielimitowanymi MMS ami proszę spojrzeć na ekran"
-      ]
-    },
-    {
-      "tag": "abonament_internet",
+      "tag": "smalltalk-abonament_internet",
       "patterns": [
         "internet oferta z abonamentem",
         "transfer internetu przy ofercie z abonamentem",
@@ -49,7 +32,7 @@
       ]
     },
     {
-      "tag": "netflix",
+      "tag": "smalltalk-netflix",
       "patterns": [
         "w pakiecie dostępny jest Netflix",
         "przy abonamencie dostępny będzie Netflix",
@@ -66,7 +49,7 @@
       ]
     },
     {
-      "tag": "time_of_agreement",
+      "tag": "smalltalk-time_of_agreement",
       "patterns": [
         "Na jaki czas podpisywana jest umowa",
         "Ile miesięcy obowiązuje umowa",
@@ -83,7 +66,7 @@
       ]
     },
     {
-      "tag": "type_of_telephone",
+      "tag": "smalltlak-type_of_telephone",
       "patterns": [
         "telefon mogę wybrać",
         "telefon przy umowie",
@@ -98,7 +81,7 @@
       ]
     },
     {
-      "tag": "help",
+      "tag": "smalltalk-help",
       "patterns": [
         "potrzebuję pomocy",
         "chciałem o coś zapytać",
@@ -111,22 +94,7 @@
       ]
     },
     {
-      "tag": "mix",
-      "patterns": [
-        "oferta mix",
-        "Czy występuje u państwa oferta mix",
-        "szukam oferty mix na kartę",
-        "mix na kartę",
-        "interesuje mnie ofera mix",
-        "jestem zainteresowany ofertą mix na kartę"
-      ],
-      "responses": [
-        "Tak mamy w naszym asortymencie ofertę mix",
-        "Tak, pewnie"
-      ]
-    },
-    {
-      "tag": "mobile_internet",
+      "tag": "smalltalk-mobile_internet",
       "patterns": [
         "Jaki internet mobilny jest dostępny",
         "internet mobilny",
@@ -141,7 +109,7 @@
       ]
     },
     {
-      "tag": "landline_internet_costs",
+      "tag": "smalltalk-landline_internet_costs",
       "patterns": [
         "Jakie są koszty internetu stacjonarnego",
         "Ile kosztuje internet stacjonarny",
@@ -156,7 +124,7 @@
       ]
     },
     {
-      "tag": "landline_internet_activation",
+      "tag": "smalltalk-landline_internet_activation",
       "patterns": [
         "opłata za aktywację internetu stacjonarnego",
         "koszta aktywacji internetu stacjonarnego",
@@ -171,22 +139,7 @@
       ]
     },
     {
-      "tag": "landline_internet_modem",
-      "patterns": [
-        "Jaki koszt modemu",
-        "Ile kosztuje modem",
-        "modem cena",
-        "ile zapłacę za modem",
-        "opłata za modem",
-        "czy modem jest darmowy"
-      ],
-      "responses": [
-        "Cena wynosi złotówkę bądź 99 złotych w zależności od wybranej opcji",
-        "Prezentuję ofertę modemów na ekranie"
-      ]
-    },
-    {
-      "tag": "landline_internet_hidden_costs",
+      "tag": "smalltalk-landline_internet_hidden_costs",
       "patterns": [
         "ukryte koszty przy internecie stacjonarnym",
         "dodatkowe opłaty przy internecie stacjonarnym",
@@ -200,7 +153,7 @@
       ]
     },
     {
-      "tag": "landline_internet_support",
+      "tag": "smalltalk-landline_internet_support",
       "patterns": [
         "czy ktoś przyjdzie zainstalować modem w moim domu",
         "kto zainstaluje modem w moim domu",
@@ -215,7 +168,7 @@
       ]
     },
     {
-      "tag": "landline_internet_without_telephone",
+      "tag": "smalltalk-landline_internet_without_telephone",
       "patterns": [
         "Czy mogę skorzystać z oferty internetu i zrezygnować całkowicie z telefonu",
         "rezygnacja telefon",
@@ -227,20 +180,7 @@
       ]
     },
     {
-      "tag": "internet_transfer",
-      "patterns": [
-        "Czy transfer danych podlega limitowi",
-        "Czy internet jest limitowany",
-        "limit internetu",
-        "limit transferu",
-        "limit dla transferu"
-      ],
-      "responses": [
-        "Nie, użytkownik może pobierać i wysyłać nieograniczoną ilość danych, a za usługę płaci stały miesięczny abonament"
-      ]
-    },
-    {
-      "tag": "5g",
+      "tag": "smalltalk-5g",
       "patterns": [
         "Czy dostępne jest pięć g",
         "Czy dostępne jest 5g",
@@ -255,7 +195,7 @@
       ]
     },
     {
-      "tag": "magenta_box",
+      "tag": "smalltalk-magenta_box",
       "patterns": [
         "Czy macie telewizję",
         "Interesuje mnie telewizja",
@@ -271,7 +211,7 @@
       ]
     },
     {
-      "tag": "fiber",
+      "tag": "smalltalk-fiber",
       "patterns": [
         "Czy w mojej okolicy jest światłowód",
         "dostępność światłowodu",
@@ -287,7 +227,7 @@
       ]
     },
     {
-      "tag": "facture",
+      "tag": "smalltalk-facture",
       "patterns": [
         "Czy wystawiana jest faktura",
         "Chciałbym dostać fakturę",
@@ -301,21 +241,7 @@
       ]
     },
     {
-      "tag": "companies",
-      "patterns": [
-        "Szukam ofert dla firm",
-        "oferty dla firm",
-        "umowa dla firmy",
-        "firma",
-        "oferta dla mojej firmy",
-        "oferta firmowa"
-      ],
-      "responses": [
-        "Posiadamy specjalne oferty dla firm, spójrz na ekran"
-      ]
-    },
-    {
-      "tag": "sale",
+      "tag": "smalltalk-sale",
       "patterns": [
         "Szukam promocji",
         "Jakie macie promocje",
@@ -330,7 +256,7 @@
       ]
     },
     {
-      "tag": "cash",
+      "tag": "smalltalk-cash",
       "patterns": [
         "Chciałem zapłacić kartą",
         "Chciałem zapłacić gotówką",
@@ -349,7 +275,7 @@
       ]
     },
     {
-      "tag": "christmas_offer",
+      "tag": "smalltalk-christmas_offer",
       "patterns": [
         "oferty świąteczne",
         "jakie są prezenty świąteczne",
@@ -362,7 +288,7 @@
       ]
     },
     {
-      "tag": "family_offer",
+      "tag": "smalltalk-family_offer",
       "patterns": [
         "Rodzinna oferta",
         "Czy masz ofertę dla rodzin",
@@ -374,11 +300,11 @@
       ],
       "responses": [
         "Witaj mamy ofertę specjalnie dla twojej rodziny, popatrz na ekran",
-        "Jasne, przygotowaliśmy coś specjalnie dla twojej rodziny"
+        "Jasne, przygotowaliśmy coś specjalnie dla Twojej rodziny"
       ]
     },
     {
-      "tag": "account_recharging",
+      "tag": "smalltalk-account_recharging",
       "patterns": [
         "chcę doładować konto",
         "czy zapłacić za telefon",
@@ -393,7 +319,7 @@
       ]
     },
     {
-      "tag": "students_offer",
+      "tag": "smalltalk-students_offer",
       "patterns": [
         "Oferta studencka",
         "Oferta dla uczniów",
@@ -408,7 +334,7 @@
       ]
     },
     {
-      "tag": "missunderstand",
+      "tag": "smalltalk-missunderstand",
       "patterns": [
         "nic nie zrozumiałem",
         "przepraszam nie rozumiem",
@@ -427,7 +353,7 @@
       ]
     },
     {
-      "tag": "name",
+      "tag": "smalltalk-name",
       "patterns": [
         "jak masz na imię",
         "nazywam się",
@@ -443,7 +369,7 @@
       ]
     },
     {
-      "tag": "google",
+      "tag": "smalltalk-google",
       "patterns": [
         "jak zrobic"
 
@@ -458,7 +384,7 @@
     },
 
     {
-      "tag": "wikipedia",
+      "tag": "smalltalk-wikipedia",
       "patterns": [
         "czy wiesz co to jest",
         "czy znasz",
@@ -483,7 +409,7 @@
       ]
     },
     {
-      "tag": "wikipedia-age",
+      "tag": "smalltalk-wikipedia-age",
       "patterns": [
         "ile lat ma",
         "wiek",
