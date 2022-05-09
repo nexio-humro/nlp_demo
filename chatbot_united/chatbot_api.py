@@ -205,7 +205,7 @@ class Chatbot:
                         print(f"tag: {tag}")
                         if tag.find('smalltalk') != -1:
                             global smalltalk_counter
-                            smalltalk_counter+= 1
+                            smalltalk_counter += 1
                         if tag == 'smalltalk-wikipedia':
                             responses = t['responses']
                             print(random.choice(responses))
@@ -280,6 +280,7 @@ class Chatbot:
                                 answer = commas_to_dots(answer)
                                 text_to_speech(answer)
             else:
+                smalltalk_counter += 1
                 print("Nie zrozumiałem, proszę zadaj inne pytanie")
                 if voice==True:
                     text_to_speech("Nie zrozumiałem.")
@@ -289,12 +290,12 @@ class Chatbot:
         print(
 '''
 =======================================
-|1. zmiana numeru                     |
-|2. zakup internetu                   |
-|3. informacie o moim koncie          |
-|4. inne pytanie                      |
-|5. prośba o kontakt z człowiekiem    |
-|brak wyboru -> powrót do smalltalk   |
+| 1. zmiana numeru                    |
+| 2. zakup internetu                  |
+| 3. informacie o moim koncie         |
+| 4. rozwiązanie umowy                |
+| 5. prośba o kontakt z człowiekiem   |
+| brak wyboru -> powrót do smalltalk  |
 =======================================
 '''
     )
@@ -315,17 +316,20 @@ class Chatflow:
     def welcome(self):
         return 'Cześć! Miło Cię widzieć. W czym moge pomóc?'
 
-    def flow(self, voice=True):
+    def flow(self, voice=False):
         global smalltalk_counter
         if self.human_detection():
-            text_to_speech(self.welcome())
+            if voice==True:
+                text_to_speech(self.welcome())
+            print(self.welcome())
         while self.human_detection():
             print(smalltalk_counter)
             stop_conversation = chatbot_test.ask(voice=voice)
             if stop_conversation == True:
                 break
             if smalltalk_counter > 2:
-                text_to_speech('Fajnie się gawędzi, ale pozwól że przedstawię Ci ofertę')
+                if voice==True:
+                    text_to_speech('Fajnie się gawędzi, ale pozwól że przedstawię Ci ofertę')
                 print('Fajnie się gawędzi, ale pozwól że przedstawię Ci ofertę')
                 chatbot_test.show_offer()
                 # global smalltalk_counter
@@ -335,23 +339,25 @@ class Chatflow:
                 else:
                     user_input = input("You:")
                 if user_input != 0:
-                    if user_input.find('jeden') !=-1 or user_input.find('dwa') !=-1 or user_input.find('trzy') !=-1 or user_input.find('cztery') !=-1 or user_input.find('1') !=-1 or user_input.find('2') or user_input.find('3') !=-1 or user_input.find('4') !=-1:
+                    if user_input.find('jeden') !=-1 or user_input.find('dwa') !=-1 or user_input.find('trzy') !=-1 or user_input.find('cztery') !=-1 or user_input.find('1') !=-1 or user_input.find('2') !=-1 or user_input.find('3') !=-1 or user_input.find('4') !=-1:
                         verification = self.id_verifiction()
                         print(verification)
-                        text_to_speech(verification)
+                        if voice==True:
+                            text_to_speech(verification)
                         print('Awaiting for vision module response...')
                     elif user_input.find('pięć') !=-1 or user_input.find('5') != -1:
                         print('Ok, obsługa zaraz podejdzie')
                         text_to_speech('Ok, obsługa zaraz podejdzie')
+                    else:
+                        pass
                 smalltalk_counter = 0
 
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":     
+    chatbot_test = Chatbot()
+    chatflow = Chatflow()
+    chatflow.flow()
 
-    
-chatbot_test = Chatbot()
-chatflow = Chatflow()
-chatflow.flow()
 # chatbot = Chatbot()
 # # chatbot.chat(voice=False)
