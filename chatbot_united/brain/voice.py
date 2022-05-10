@@ -42,17 +42,18 @@ def speech_to_text_ruchome():
             return 0
 
 
-def speech_to_text():
+def speech_to_text(duration=3.5, bar_status=True):
     recognizer = sr.Recognizer()
     # depends on microphone type/noise etc
     # recognizer.energy_threshold = 350
     with sr.Microphone() as source:
         try:
             # audio = recognizer.listen(source, timeout=3.5)
-            progress_bar_thread = threading.Thread(target=progress_bar, name="progress_bar")
-            progress_bar_thread.start()
+            if bar_status == True:
+                progress_bar_thread = threading.Thread(target=progress_bar, name="progress_bar")
+                progress_bar_thread.start()
             print("nasłuchuję...")
-            audio = recognizer.record(source, duration=3.5)
+            audio = recognizer.record(source, duration=duration)
             
             # print("rozpoznaję...")
             text = recognizer.recognize_google(audio, language='pl-PL')

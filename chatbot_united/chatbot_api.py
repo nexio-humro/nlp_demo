@@ -335,7 +335,7 @@ class Chatflow:
                 # global smalltalk_counter
                 # user_input = str(speech_to_text())
                 if voice==True:
-                    user_input = speech_to_text()
+                    user_input = speech_to_text(duration=11, bar_status=False)
                 else:
                     user_input = input("You:")
                 if user_input != 0:
@@ -357,7 +357,7 @@ class Chatflow:
 if __name__ == "__main__":     
     chatbot_test = Chatbot()
     chatflow = Chatflow()
-    chatflow.flow()
+    chatflow.flow(voice=True)
 
 # chatbot = Chatbot()
 # # chatbot.chat(voice=False)
