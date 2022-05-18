@@ -357,7 +357,7 @@ class Chatflow:
 if __name__ == "__main__":     
     chatbot_test = Chatbot()
     chatflow = Chatflow()
-    chatflow.flow(voice=True)
+    chatflow.flow(voice=False)
 
 # chatbot = Chatbot()
 # # chatbot.chat(voice=False)
