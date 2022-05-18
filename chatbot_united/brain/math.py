@@ -1,7 +1,6 @@
 import re
 from brain.filters import math_symbol_swap
 
-
 def do_math(query):
     try:
         query_filtered = math_symbol_swap(query)
@@ -12,6 +11,6 @@ def do_math(query):
         if (eval(query_filtered)) == 'None' or None:
             return "Powtórz proszę"
         else:
-            return round(str(eval(query_filtered)), 2)
+            return str(round(eval(query_filtered), 2))
     except:
         return "Przykro mi. nie umiem tego policzyć"
