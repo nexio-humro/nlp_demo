@@ -1,4 +1,6 @@
 import re
+
+
 def query_filter(query):
     #classic
     query = re.sub(r"^.+?(?= co )", "", query)
@@ -33,7 +35,6 @@ def query_filter(query):
     #place
     query = query.replace("gdzie jest ", "")
     query = query.replace("gdzie leży ", "")
-    
     #books
     query = query.replace("kto napisał", "")
     query = query.replace("autor", "")
@@ -41,7 +42,6 @@ def query_filter(query):
     query = query.replace("autorką", "")
     query_filtered = query.lstrip()
     return query_filtered
-
 
 def math_symbol_swap(query):
     query = query.replace("jeden", "1")
@@ -74,7 +74,6 @@ def math_symbol_swap(query):
     query = query.replace("x", "*")
     query_filtered = query.lstrip()
     return query_filtered
-
 
 def currency_symbol_swap(query):
     #currency
@@ -109,3 +108,47 @@ def nested_dot_filter(sentences):
 def commas_to_dots(sentences):
     sentences_filtered = sentences.replace(",", ".")
     return sentences_filtered
+
+def shortcuts_filter(article):
+    article = article.replace(" r.", " roku")
+    article = article.replace(" pt.", " pod tytułem")
+    article = article.replace(" dn.", " dniach")
+    article = article.replace(" ur.", " urodzony")
+    article = article.replace(" wlaśc.", " właściwie")
+    article = article.replace(" właśc.", " właściwie")
+    article = article.replace(" właść.", " własciwie")
+    article = article.replace(" duń.", " duński")
+    article = article.replace(" duń.", " duński")
+    article = article.replace(" ros.", " rosyjski")
+    article = article.replace(" ps.", " pseudonim")
+    article = article.replace(" j.a", " jednostka astronomiczna")
+    article = article.replace(" gen.", " generał")
+    return article
+
+def cut_all_before_hyphen(article):
+    article_splitted = article.split("– ")
+    if len(article_splitted)>1:
+        article_splitted.pop(0)
+        filtered = '–'.join(article_splitted)
+        return filtered
+    else:
+        return article
+
+def trim_length(filtered_article):
+    sentences_splitted = filtered_article.split(".")
+    total_words = 0
+    article_ordered = ''
+    
+    for sentence in sentences_splitted:
+        if total_words < 5:
+            words = sentence.split(" ")
+            total_words = total_words + len(words)
+            article_ordered+=sentence
+            article_ordered+='.'
+
+    return article_ordered
+
+def trim_details(sentences):
+    trimmed_sentences = re.sub("[\==\[].*?[\==\]]", "", sentences)
+    trimmed_sentences = trimmed_sentences.replace("==", "").replace("==", "")
+    return trimmed_sentences    
