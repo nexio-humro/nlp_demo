@@ -1,6 +1,6 @@
 import wikipedia
 from brain.filters import nested_dot_filter, query_filter, cut_all_before_hyphen, shortcuts_filter, trim_details, trim_length
-# from brain.voice import text_to_speech, speech_to_text
+from brain.voice import text_to_speech, speech_to_text
 wikipedia.set_lang("pl")
 
 
