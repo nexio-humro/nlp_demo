@@ -28,5 +28,5 @@ def wikipedia_search(query, voice):
         return "Temporarily I can't aswer it"
     return "I give up, please ask other question"
 
-print(wikipedia_search('poland', voice=False))
+
 

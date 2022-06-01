@@ -1,5 +1,17 @@
 from chatbot_api import Chatbot
 
+from text_preprocessor import TextPreprocessor
+from brain.math import do_math
+from brain.birthdates import wikipedia_age_search, birthdate_finder
+from brain.filters import commas_to_dots
+from brain.time import get_time, get_weekday
+from brain.wikipedia_search import wikipedia_search
+from brain.voice import text_to_speech
+from brain.voice import speech_to_text
+from brain.currency import get_rate_x_to_pln
+from brain.temperature import show_temperature
+
+
 smalltalk_counter = 0
 
 
@@ -59,7 +71,7 @@ class Chatflow:
 if __name__ == "__main__":     
     chatbot_test = Chatbot()
     chatflow = Chatflow()
-    chatflow.flow(voice=False, buisness_hint=False)
+    chatflow.flow(voice=True, buisness_hint=False)
 
 # chatbot = Chatbot()
 # # chatbot.chat(voice=False)
