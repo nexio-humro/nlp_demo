@@ -1,0 +1,107 @@
+{
+    "intents": [
+    {
+        "tag": "smalltalk-help-eng",
+        "patterns": [
+            "I need help",
+            "I have a question",
+            "help",
+            "help please"
+            ],
+        "responses": [
+            "Yes, tell me what is your problem",
+            "What can I help you?"
+            ]
+    },
+    {
+        "tag": "smalltalk-fiber-eng",
+        "patterns": [
+          "Is there fiber in my neighbourhood",
+          "fiber availability",
+          "fiber",
+          "super fast internet",
+          "fiber map"
+        ],
+        "responses": [
+          "The map is displayed on the screen",
+          "Of course, look at the screen please"
+        ]
+      },
+      {
+        "tag": "smalltalk-missunderstand-eng",
+        "patterns": [
+          "I do not understand",
+          "I don't understand",
+          "repeat",
+          "I don't know",
+          "you are wrong",
+          "you're wrong"
+        ],
+        "responses": [
+          "I'm sorry, I'm learning.",
+          "I'm sorry, say what you mean in other words"
+        ]
+      },
+      {
+        "tag": "smalltalk-name-eng",
+        "patterns": [
+          "what is your name",
+          "what's your name",
+          "introduce yourself",
+          "who are you",
+          "name"
+        ],
+        "responses": [
+          "I'm Nexio bot",
+          "Friends call me Nexio bot"
+        ]
+      },
+      {
+        "tag": "smalltalk-wikipedia-eng",
+        "patterns": [
+          "what is",
+          "do you know",
+          "who is",
+          "battle of",
+          "wojna pod",
+          "when was",
+          "who write",
+          "who is the author",
+          "author",
+          "where is"
+        ],
+        "responses": [
+          "hyym... [w]",
+          "let mi think..[w]",
+          "am I right? [w]"
+        ]
+      },
+      {
+        "tag": "smalltalk-whatsup-eng",
+        "patterns": [
+          "how are you doing",
+          "what's up",
+          "how do you feel"
+        ],
+        "responses": [
+          "I'm great!, thanks",
+          "Everything is ok",
+          "I have a good day!"
+        ]
+      },
+      {
+        "tag": "smalltalk-greeting-eng",
+        "patterns": [
+          "hi",
+          "hello",
+          "good morning",
+          "good evening"
+        ],
+        "responses": [
+          "Hi! How can I help you?",
+          "Hello, how can I help you?",
+          "Hi! Ask me a question, I'll try to help!"
+        ]
+  }
+    ]
+}

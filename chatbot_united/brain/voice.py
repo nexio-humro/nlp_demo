@@ -21,18 +21,18 @@ def text_to_speech(text):
     os.remove('expression.mp3')
 
 
-def speech_to_text_ruchome():
+def speech_to_text():
     recognizer = sr.Recognizer()
     # depends on microphone type/noise etc
-    with sr.Microphone(device_index=0) as source:
+    with sr.Microphone() as source:
         try:
             # audio = recognizer.listen(source, timeout=3.5)
-            recognizer.adjust_for_ambient_noise(source, duration=0.8)
+            recognizer.adjust_for_ambient_noise(source, duration=0.5)
             # recognizer.dynamic_energy_threshold = True 
             print("nasłuchuję...")
             # audio = recognizer.listen(source)
-            audio = recognizer.listen(source,timeout=8,phrase_time_limit=8)
-            # print("rozpoznaję...")
+            audio = recognizer.listen(source)
+            print("rozpoznaję...")
             text = recognizer.recognize_google(audio, language='pl-PL')
             if text != '':
                 print(text)
@@ -42,7 +42,7 @@ def speech_to_text_ruchome():
             return 0
 
 
-def speech_to_text(duration=3.5, bar_status=True):
+def speech_to_text_X(duration=3.5, bar_status=True):
     recognizer = sr.Recognizer()
     # depends on microphone type/noise etc
     # recognizer.energy_threshold = 350
